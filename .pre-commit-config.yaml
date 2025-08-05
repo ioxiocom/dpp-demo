@@ -1,0 +1,52 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: ^.*/vendor/.*$
+      - id: end-of-file-fixer
+        exclude: ^.*/vendor/.*$
+      - id: check-merge-conflict
+      - id: debug-statements
+      # All non-bat files should end with LF
+      - id: mixed-line-ending
+        name: Ensure LF endings on most files
+        args: ["--fix=lf"]
+        exclude: \.bat$
+      # Bat files should end with CRLF
+      - id: mixed-line-ending
+        name: Ensure CFLF endings on Windows files
+        args: ["--fix=crlf"]
+        files: \.bat$
+
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+      - id: shellcheck
+        exclude: ^.*/vendor/
+
+  - repo: local
+    hooks:
+      - id: bun install
+        name: bun install
+        entry: bun install
+        language: system
+        pass_filenames: false
+
+      - id: format
+        name: format
+        entry: bun run format-precommit
+        language: system
+        # Exclude files unsupported by prettier
+        exclude: |
+          (?x)(
+            ^\.gitignore$|
+            ^\.editorconfig$|
+            ^\.npmrc$|
+            ^\.env\.|
+            ^bun\.lock$|
+            ^Dockerfile$|
+            \.(jpg|png|md|toml|sh|svg)$
+          )
