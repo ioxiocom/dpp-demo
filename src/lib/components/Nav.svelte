@@ -141,6 +141,7 @@
       border: 1px solid black;
       border-radius: 3px;
       padding: 1rem;
+      user-select: none;
 
       h3 {
         margin: 0;

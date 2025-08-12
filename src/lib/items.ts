@@ -214,13 +214,50 @@ export function getItemByNameSerial(name: string, serial: string): Item {
   return item
 }
 
+function _traverse(itemId: string, nesting: string[], processed: string[]) {
+  nesting.push(itemId)
+  processed.push(itemId)
+  if (nesting.length > 25) {
+    const err = new Error("Infinite recursion?")
+    // @ts-ignore
+    err.nesting = nesting
+
+    throw err
+  }
+
+  for (let childId of items[itemId].childIds) {
+    _traverse(childId, JSON.parse(JSON.stringify(nesting)), processed)
+  }
+}
+
 function init() {
+  // Generate parent IDs
   for (let itemId in items) {
     let children = items[itemId].childIds
+
     for (let childId of children) {
-      console.log(`${childId} is a child of ${itemId}`)
+      if (items[childId].parentId) {
+        console.warn(`Overriding parent of ${childId}, seems like it has multiple parents?`)
+        console.warn(`Old: ${items[childId].parentId}, New: ${itemId}`)
+      }
       items[childId].parentId = itemId
     }
+  }
+
+  // Do a basic sanity check for infinite recursion
+  try {
+    const processed: string[] = []
+    for (let itemId in items) {
+      if (!processed.includes(itemId)) {
+        _traverse(itemId, [], processed)
+      }
+    }
+  } catch (e) {
+    // Not a critical error
+    console.error("Seems there is infinite recursion in item tree, you might want to fix that.")
+
+    // @ts-ignore ... TypeScript didn't want me typing the catch either so eh, whatever
+    console.error(e.nesting.join(" -> "))
   }
 }
 
