@@ -18,7 +18,7 @@
   }
 
   function selectItem(item: Item) {
-    goto(`/item/${item.name}/${item.serial}/`)
+    goto(`/item/${item.product}/${item.serial}/`)
   }
 
   function kbdSelectItem(evt: KeyboardEvent, item: Item) {

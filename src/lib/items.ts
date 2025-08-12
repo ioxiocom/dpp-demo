@@ -12,6 +12,7 @@ export type DataProduct = {
 
 export type Item = {
   name: string
+  product: string
   serial: string
   manufacturer: string
   imageUrl: string
@@ -21,12 +22,13 @@ export type Item = {
 }
 
 export const items: { [id: ItemID]: Item } = {
-  RDX5_Drill_BG00928740: {
+  BG00928740_1: {
     name: "RDX5 Drill",
-    serial: "BG00928740",
+    product: "BG00928740",
+    serial: "1",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
-    childIds: ["RDX5_Drill_BG00928741"],
+    childIds: ["BG00928740_2"],
     availableData: [
       {
         name: "Product data sheet (MOCK)",
@@ -50,12 +52,13 @@ export const items: { [id: ItemID]: Item } = {
     ],
   },
 
-  RDX5_Drill_BG00928741: {
+  BG00928740_2: {
     name: "RDX5 Drill",
-    serial: "BG00928741",
+    product: "BG00928740",
+    serial: "2",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
-    childIds: ["RDX5_Drill_BG00928742"],
+    childIds: ["BG00928740_3"],
     availableData: [
       {
         name: "Product data sheet (MOCK)",
@@ -79,12 +82,13 @@ export const items: { [id: ItemID]: Item } = {
     ],
   },
 
-  RDX5_Drill_BG00928742: {
+  BG00928740_3: {
     name: "RDX5 Drill",
-    serial: "BG00928742",
+    product: "BG00928740",
+    serial: "3",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
-    childIds: ["RDX5_Drill_BG00928743", "Transmission_BG00788225"],
+    childIds: ["BG00928740_4", "BG00788225_5"],
     availableData: [
       {
         name: "Product data sheet (MOCK)",
@@ -108,9 +112,10 @@ export const items: { [id: ItemID]: Item } = {
     ],
   },
 
-  RDX5_Drill_BG00928743: {
+  BG00928740_4: {
     name: "RDX5 Drill",
-    serial: "BG00928743",
+    product: "BG00928740",
+    serial: "4",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
     childIds: [],
@@ -137,9 +142,10 @@ export const items: { [id: ItemID]: Item } = {
     ],
   },
 
-  Transmission_BG00788225: {
+  BG00788225_5: {
     name: "Transmission",
-    serial: "BG00788225",
+    product: "BG00788225",
+    serial: "5",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/Transmission_BG00788225.png",
     childIds: [],
@@ -204,11 +210,11 @@ export function getItemById(id: ItemID): Item {
   return items[id]
 }
 
-export function getItemByNameSerial(name: string, serial: string): Item {
-  let item = Object.values(items).find((item) => item.name === name && item.serial === serial)
+export function getItemByProductSerial(product: string, serial: string): Item {
+  let item = Object.values(items).find((item) => item.product === product && item.serial === serial)
 
   if (!item) {
-    throw new Error(`No item by name ${name} and serial ${serial}`)
+    throw new Error(`No item by name ${product} and serial ${serial}`)
   }
 
   return item

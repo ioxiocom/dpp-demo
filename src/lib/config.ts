@@ -23,7 +23,7 @@ export const config = {
 
   // Requests to / will be redirected here
   defaultItem: {
-    name: defaultItem.name,
+    product: defaultItem.product,
     serial: defaultItem.serial,
   },
 }

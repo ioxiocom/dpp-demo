@@ -6,5 +6,5 @@ import { config } from "$lib/config"
 
 export const load: PageLoad = ({ params }) => {
   const item = config.defaultItem
-  return redirect(307, `/item/${item.name}/${item.serial}/`)
+  return redirect(307, `/item/${item.product}/${item.serial}/`)
 }
