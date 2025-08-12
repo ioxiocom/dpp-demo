@@ -15,7 +15,8 @@ export type Item = {
   serial: string
   manufacturer: string
   imageUrl: string
-  connectedItems: ItemID[]
+  parentId?: ItemID
+  childIds: ItemID[]
   availableData: DataProduct[]
 }
 
@@ -25,7 +26,94 @@ export const items: { [id: ItemID]: Item } = {
     serial: "BG00928740",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
-    connectedItems: ["Transmission_BG00788225"],
+    childIds: ["RDX5_Drill_BG00928741"],
+    availableData: [
+      {
+        name: "Product data sheet (MOCK)",
+        definition: "Foo/Bar",
+        source: "foo",
+        args: {
+          serial: "BG00928740",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Current weather (REAL)",
+        definition: "Meteorology/Weather_v0.1",
+        source: "ioxio:visual_crossing",
+        args: {
+          lat: "59.43",
+          lon: "24.75",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+    ],
+  },
+
+  RDX5_Drill_BG00928741: {
+    name: "RDX5 Drill",
+    serial: "BG00928741",
+    manufacturer: "Sandvik",
+    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    childIds: ["RDX5_Drill_BG00928742"],
+    availableData: [
+      {
+        name: "Product data sheet (MOCK)",
+        definition: "Foo/Bar",
+        source: "foo",
+        args: {
+          serial: "BG00928740",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Current weather (REAL)",
+        definition: "Meteorology/Weather_v0.1",
+        source: "ioxio:visual_crossing",
+        args: {
+          lat: "59.43",
+          lon: "24.75",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+    ],
+  },
+
+  RDX5_Drill_BG00928742: {
+    name: "RDX5 Drill",
+    serial: "BG00928742",
+    manufacturer: "Sandvik",
+    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    childIds: ["RDX5_Drill_BG00928743", "Transmission_BG00788225"],
+    availableData: [
+      {
+        name: "Product data sheet (MOCK)",
+        definition: "Foo/Bar",
+        source: "foo",
+        args: {
+          serial: "BG00928740",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Current weather (REAL)",
+        definition: "Meteorology/Weather_v0.1",
+        source: "ioxio:visual_crossing",
+        args: {
+          lat: "59.43",
+          lon: "24.75",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+    ],
+  },
+
+  RDX5_Drill_BG00928743: {
+    name: "RDX5 Drill",
+    serial: "BG00928743",
+    manufacturer: "Sandvik",
+    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    childIds: [],
     availableData: [
       {
         name: "Product data sheet (MOCK)",
@@ -54,7 +142,7 @@ export const items: { [id: ItemID]: Item } = {
     serial: "BG00788225",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/Transmission_BG00788225.png",
-    connectedItems: ["RDX5_Drill_BG00928740"],
+    childIds: [],
     availableData: [
       {
         name: "Product data sheet (MOCK)",
@@ -125,3 +213,15 @@ export function getItemByNameSerial(name: string, serial: string): Item {
 
   return item
 }
+
+function init() {
+  for (let itemId in items) {
+    let children = items[itemId].childIds
+    for (let childId of children) {
+      console.log(`${childId} is a child of ${itemId}`)
+      items[childId].parentId = itemId
+    }
+  }
+}
+
+init()

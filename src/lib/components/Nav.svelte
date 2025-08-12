@@ -51,7 +51,8 @@
       </div>
       <div class="current">
         <h2>Selected item</h2>
-        <div class="box">
+        <!-- TODO: Maybe move these 3 near-identical boxes in some item component? -->
+        <div class="box selected">
           <h3>{item.name}</h3>
           <div class="details">
             <span>{item.serial}</span>
@@ -59,10 +60,10 @@
           </div>
         </div>
       </div>
-      <div class="connected">
-        <h2>Connected items</h2>
-        {#each item.connectedItems as id}
-          {@const _item = getItemById(id)}
+      <div class="parent">
+        <h2>Selected item is a part of</h2>
+        {#if item.parentId}
+          {@const _item = getItemById(item.parentId)}
           <div
             class="box"
             onclick={() => selectItem(_item)}
@@ -76,13 +77,50 @@
               <span>{_item.manufacturer}</span>
             </div>
           </div>
-        {/each}
+        {:else}
+          <div class="box none">
+            <h3>Nothing</h3>
+            <div class="details">
+              <span>&nbsp;</span>
+              <span>&nbsp</span>
+            </div>
+          </div>
+        {/if}
+      </div>
+      <div class="children">
+        <h2>Parts of the selected item</h2>
+        {#if item.childIds.length > 0}
+          {#each item.childIds as id}
+            {@const _item = getItemById(id)}
+            <div
+              class="box"
+              onclick={() => selectItem(_item)}
+              onkeyup={(evt) => kbdSelectItem(evt, _item)}
+              role="button"
+              tabindex="0"
+            >
+              <h3>{_item.name}</h3>
+              <div class="details">
+                <span>{_item.serial}</span>
+                <span>{_item.manufacturer}</span>
+              </div>
+            </div>
+          {/each}
+        {:else}
+          <div class="box none">
+            <h3>Nothing</h3>
+            <div class="details">
+              <span>&nbsp;</span>
+              <span>&nbsp</span>
+            </div>
+          </div>
+        {/if}
       </div>
     </div>
   {/if}
 </nav>
 
-<style lang="ts">
+<style lang="scss">
   @use "$scss/init" as *;
 
   .nav-items {
@@ -93,6 +131,12 @@
       flex-direction: column;
     }
 
+    .children {
+      display: flex;
+      flex-direction: column;
+      gap: $default-spacing;
+    }
+
     .box {
       border: 1px solid black;
       border-radius: 3px;
@@ -101,9 +145,19 @@
       h3 {
         margin: 0;
       }
+
+      &.selected {
+        border-color: #1441f5;
+        background-color: #e6ebff;
+      }
+
+      &.none {
+        border-style: dashed;
+        border-color: #888888;
+      }
     }
 
-    .connected .box {
+    .box[role="button"] {
       cursor: pointer;
     }
 
