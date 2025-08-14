@@ -11,10 +11,10 @@ export const mocks: Mock[] = [
     definition: "Foo/Bar",
     source: "foo",
     args: {
-      serial: "BG00928740",
+      serial: "L082566",
     },
     response: {
-      hello: "BG00928740",
+      hello: "BG00928740 L082566",
     },
   },
 

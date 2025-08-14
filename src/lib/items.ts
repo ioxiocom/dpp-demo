@@ -22,20 +22,28 @@ export type Item = {
 }
 
 export const items: { [id: ItemID]: Item } = {
-  BG00928740_1: {
-    name: "RDX5 Drill",
+  BG00928740_L082566: {
+    name: "RDX5 Rock Drill",
     product: "BG00928740",
-    serial: "1",
+    serial: "L082566",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
-    childIds: ["BG00928740_2"],
+    childIds: [
+      "BG00788225_T2-3265",
+      "55003625_43496",
+      "BG00790833_8675",
+      "BG00787392_09N25",
+      "55057798_TW711338",
+      "BG01127113_C25TF",
+      "BG00737500_K23-38",
+    ],
     availableData: [
       {
         name: "Product data sheet (MOCK)",
         definition: "Foo/Bar",
         source: "foo",
         args: {
-          serial: "BG00928740",
+          serial: "L082566",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -52,20 +60,20 @@ export const items: { [id: ItemID]: Item } = {
     ],
   },
 
-  BG00928740_2: {
-    name: "RDX5 Drill",
-    product: "BG00928740",
-    serial: "2",
+  "BG00788225_T2-3265": {
+    name: "Housing, Gear",
+    product: "BG00788225",
+    serial: "T2-3265",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
-    childIds: ["BG00928740_3"],
+    childIds: [],
     availableData: [
       {
         name: "Product data sheet (MOCK)",
         definition: "Foo/Bar",
         source: "foo",
         args: {
-          serial: "BG00928740",
+          serial: "T2-3265",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -82,20 +90,20 @@ export const items: { [id: ItemID]: Item } = {
     ],
   },
 
-  BG00928740_3: {
-    name: "RDX5 Drill",
-    product: "BG00928740",
-    serial: "3",
-    manufacturer: "Sandvik",
+  "55003625_43496": {
+    name: "Accumulator",
+    product: "55003625",
+    serial: "43496",
+    manufacturer: "Ita Nordic",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
-    childIds: ["BG00928740_4", "BG00788225_5"],
+    childIds: [],
     availableData: [
       {
         name: "Product data sheet (MOCK)",
         definition: "Foo/Bar",
         source: "foo",
         args: {
-          serial: "BG00928740",
+          serial: "43496",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -112,11 +120,11 @@ export const items: { [id: ItemID]: Item } = {
     ],
   },
 
-  BG00928740_4: {
-    name: "RDX5 Drill",
-    product: "BG00928740",
-    serial: "4",
-    manufacturer: "Sandvik",
+  BG00790833_8675: {
+    name: "Flushing device",
+    product: "BG00790833",
+    serial: "8675",
+    manufacturer: "Ita Nordic",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
     childIds: [],
     availableData: [
@@ -142,11 +150,11 @@ export const items: { [id: ItemID]: Item } = {
     ],
   },
 
-  BG00788225_5: {
-    name: "Transmission",
-    product: "BG00788225",
-    serial: "5",
-    manufacturer: "Sandvik",
+  BG00787392_09N25: {
+    name: "Housing, Seal",
+    product: "BG00787392",
+    serial: "09N25",
+    manufacturer: "Nomet",
     imageUrl: "/images/items/Transmission_BG00788225.png",
     childIds: [],
     availableData: [
@@ -155,7 +163,7 @@ export const items: { [id: ItemID]: Item } = {
         definition: "Foo/Bar",
         source: "foo",
         args: {
-          serial: "BG00788225",
+          serial: "09N25",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -174,7 +182,7 @@ export const items: { [id: ItemID]: Item } = {
         source: "foo",
         args: {
           item: "Transmission",
-          serial: "BG00788225",
+          serial: "09N25",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -184,7 +192,7 @@ export const items: { [id: ItemID]: Item } = {
         source: "foo",
         args: {
           item: "Transmission",
-          serial: "BG00788225",
+          serial: "09N25",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -194,7 +202,97 @@ export const items: { [id: ItemID]: Item } = {
         source: "foo",
         args: {
           item: "Transmission",
-          serial: "BG00788225",
+          serial: "09N25",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+    ],
+  },
+
+  "55057798_TW711338": {
+    name: "Bushing, Rotation",
+    product: "55057798",
+    serial: "TW711338",
+    manufacturer: "Tasowheel",
+    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    childIds: [],
+    availableData: [
+      {
+        name: "Product data sheet (MOCK)",
+        definition: "Foo/Bar",
+        source: "foo",
+        args: {
+          serial: "TW711338",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Current weather (REAL)",
+        definition: "Meteorology/Weather_v0.1",
+        source: "ioxio:visual_crossing",
+        args: {
+          lat: "59.43",
+          lon: "24.75",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+    ],
+  },
+
+  BG01127113_C25TF: {
+    name: "Rotation, Shaft",
+    product: "BG01127113",
+    serial: "C25TF",
+    manufacturer: "Hanza",
+    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    childIds: [],
+    availableData: [
+      {
+        name: "Product data sheet (MOCK)",
+        definition: "Foo/Bar",
+        source: "foo",
+        args: {
+          serial: "C25TF",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Current weather (REAL)",
+        definition: "Meteorology/Weather_v0.1",
+        source: "ioxio:visual_crossing",
+        args: {
+          lat: "59.43",
+          lon: "24.75",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+    ],
+  },
+
+  "BG00737500_K23-38": {
+    name: "Cylinder",
+    product: "BG00737500",
+    serial: "K23-38",
+    manufacturer: "Sandvik",
+    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    childIds: [],
+    availableData: [
+      {
+        name: "Product data sheet (MOCK)",
+        definition: "Foo/Bar",
+        source: "foo",
+        args: {
+          serial: "K23-38",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Current weather (REAL)",
+        definition: "Meteorology/Weather_v0.1",
+        source: "ioxio:visual_crossing",
+        args: {
+          lat: "59.43",
+          lon: "24.75",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -242,11 +340,21 @@ function init() {
     let children = items[itemId].childIds
 
     for (let childId of children) {
-      if (items[childId].parentId) {
+      if (typeof items[childId] === "undefined") {
+        console.error(`${itemId} has child ${childId} which does not exist.`)
+        continue
+      }
+      if (typeof items[childId].parentId !== "undefined" && items[childId].parentId) {
         console.warn(`Overriding parent of ${childId}, seems like it has multiple parents?`)
         console.warn(`Old: ${items[childId].parentId}, New: ${itemId}`)
       }
       items[childId].parentId = itemId
+    }
+  }
+
+  for (let itemId in items) {
+    if (typeof items[itemId].parentId === "undefined" || !items[itemId].parentId) {
+      console.warn(`Item ${itemId} does not have a parent.`)
     }
   }
 
@@ -259,6 +367,7 @@ function init() {
       }
     }
   } catch (e) {
+    console.error(e)
     // Not a critical error
     console.error("Seems there is infinite recursion in item tree, you might want to fix that.")
 
