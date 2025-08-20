@@ -30,6 +30,9 @@
     "vitest": "^3.2.3"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.2.6",
+    "@fontsource/istok-web": "^5.2.6",
+    "@fontsource/poppins": "^5.2.6",
     "@poppanator/sveltekit-svg": "^5.0.1",
     "sass-embedded": "^1.89.2"
   }

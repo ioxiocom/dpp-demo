@@ -178,7 +178,7 @@ export const items: { [id: ItemID]: Item } = {
       },
       {
         name: "Product carbon footprint",
-        definition: "Carbon/Foot/Print",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
           item: "Transmission",

@@ -42,7 +42,7 @@
     <span>{dataProduct.name}</span>
     <div class="request">
       {#if DataProductComponent}
-        <button onclick={fetchData} class:error>
+        <button class="btn small"onclick={fetchData} class:error>
           {#if error}
             Error, please try again.
           {:else if !loading}
@@ -56,7 +56,7 @@
       {/if}
     </div>
     <div class="close">
-      <button onclick={closeBox}>Close</button>
+      <button class="btn outlined small" onclick={closeBox}>Close</button>
     </div>
   </div>
   {#if open}
@@ -70,8 +70,7 @@
   @use "$scss/init" as *;
 
   .box {
-    border: 1px solid black;
-    border-radius: 3px;
+    border: 1px solid #E6E6E6;
     padding: 1rem;
 
     &.unsupported {
@@ -85,6 +84,10 @@
   }
 
   .title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
     .close {
       display: none;
     }

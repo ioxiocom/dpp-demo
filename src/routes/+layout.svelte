@@ -4,14 +4,17 @@
   import "$scss/global.scss"
   import Nav from "$lib/components/Nav.svelte"
 
+  import "@fontsource/istok-web/400.css"
+  import "@fontsource/istok-web/700.css"
+  import "@fontsource/poppins/400.css"
+  import "@fontsource/poppins/500.css"
+  import "@fontsource/poppins/600.css"
+  import "@fontsource-variable/inter"
+
   const { children } = $props()
 </script>
 
-<div class="nav">
-  <Container>
-    <Nav />
-  </Container>
-</div>
+<Nav />
 
 <main class="container">
   <section class="content-container">
@@ -19,9 +22,9 @@
   </section>
 </main>
 
-<div class="footer">
-  <Container>Powered by <a href="https://ioxio.com">IOXIO</a></Container>
-</div>
+<footer>
+  Powered by <a href="https://ioxio.com">IOXIO</a>
+</footer>
 
 <style lang="scss">
   @use "$scss/init" as *;
@@ -41,16 +44,19 @@
     flex-grow: 1;
   }
 
-  .nav {
-    border-bottom: 1px solid rgb(0, 0, 0, 5%);
-    background-color: rgba(0, 0, 0, 2%);
-    padding: $default-spacing;
-  }
-
-  .footer {
-    padding: $default-spacing;
+  footer {
     border-top: 1px solid rgb(0, 0, 0, 5%);
-    background-color: rgba(0, 0, 0, 2%);
+    background-color: #101010;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+
+    a {
+      color: #a08c64;
+    }
   }
 
   .content-container {

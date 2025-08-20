@@ -29,6 +29,21 @@ export const mocks: Mock[] = [
       hello: "BG00788225",
     },
   },
+
+  // Product/Sustainability/CarbonFootprint_v0.1
+  {
+    definition: "Product/Sustainability/CarbonFootprint_v0.1",
+    source: "foo",
+    args: {
+      item: "Transmission",
+          serial: "09N25",
+    },
+    response: {
+      materialFootprint: 4.8,
+      processingFootprint: 5.3,
+      logisticsFootprint: 0.3,
+    },
+  },
 ]
 
 export function getMock(definition: string, source: string, data: object): Mock {
