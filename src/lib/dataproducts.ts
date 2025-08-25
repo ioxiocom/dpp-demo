@@ -6,7 +6,6 @@ import MeasurementReport_v_0_3 from "$lib/dataproducts/Product_MetalComponent_Me
 import Traceability_v_0_3 from "$lib/dataproducts/Product_MetalComponent_Traceability_v0_3.svelte"
 import CarbonFootprint_v_0_1 from "$lib/dataproducts/Product_Sustainability_CarbonFootprint_v0_1.svelte"
 
-
 export const supportedDataProducts: { [definition: string]: Component<any> } = {
   "Foo/Bar": FooBar,
   "Meteorology/Weather_v0.1": Meteorology_Weather_v0_1,

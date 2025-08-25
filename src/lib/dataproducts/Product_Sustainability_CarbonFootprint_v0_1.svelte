@@ -11,18 +11,12 @@
     processingFootprint: number
   }
 
-  const totalFootprint = response.logisticsFootprint + response.materialFootprint + response.processingFootprint
-  console.log(response)
+  const totalFootprint =
+    response.logisticsFootprint + response.materialFootprint + response.processingFootprint
 </script>
 
 <Article>
-  <SectionHeader title="Carbon Footprint">
-    Breakdown of the product's carbon footprint by category (kg CO₂e)
-  </SectionHeader>
-
-  <DataRow label="Total carbon footprint" value={formatNumber(totalFootprint, "kg CO₂e")} />
-
-  <Divider />
+  <SectionHeader title="Carbon Footprint">The carbon footprint of manufacturing a product.</SectionHeader>
 
   <DataRow label="Material footprint" value={formatNumber(response.materialFootprint, "kg CO₂e")} />
   <DataRow label="Processing footprint" value={formatNumber(response.processingFootprint, "kg CO₂e")} />

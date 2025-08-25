@@ -9,22 +9,27 @@
   import "@fontsource/poppins/400.css"
   import "@fontsource/poppins/500.css"
   import "@fontsource/poppins/600.css"
-  import "@fontsource-variable/inter"
+  import "@fontsource/inter/400.css"
+  import "@fontsource/inter/500.css"
+  import "@fontsource/inter/600.css"
 
   const { children } = $props()
+
+  let isMenuOpen = $state(false)
 </script>
 
-<Nav />
+<Nav bind:open={isMenuOpen} />
 
-<main class="container">
-  <section class="content-container">
-    {@render children()}
-  </section>
-</main>
-
-<footer>
-  Powered by <a href="https://ioxio.com">IOXIO</a>
-</footer>
+{#if !isMenuOpen}
+  <main class="container">
+    <section class="content-container">
+      {@render children()}
+    </section>
+  </main>
+  <footer>
+    Powered by <a href="https://ioxio.com">IOXIO</a>
+  </footer>
+{/if}
 
 <style lang="scss">
   @use "$scss/init" as *;
@@ -61,6 +66,6 @@
 
   .content-container {
     flex-grow: 1;
-    padding: $default-spacing 0 $default-spacing 0;
+    padding: 0 0 $default-spacing 0;
   }
 </style>

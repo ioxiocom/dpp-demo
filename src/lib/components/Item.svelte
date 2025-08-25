@@ -1,23 +1,23 @@
 <script lang="ts">
-  import { goto } from "$app/navigation"
   import type { Item } from "$lib/items"
 
   type Props = {
     item?: Item
     selected?: boolean
+    onClick?: (item: Item) => void
   }
-  let { item, selected }: Props = $props()
+  let { item, selected, onClick }: Props = $props()
 
-  function selectItem() {
-    if (item) {
-      goto(`/item/${item.product}/${item.serial}/`)
+  function handleClick() {
+    if (item && onClick) {
+      onClick(item)
     }
   }
 
   const nothing = $derived(typeof item === "undefined")
 </script>
 
-<button class="item" class:selected class:nothing onclick={selectItem}>
+<button class="item" class:selected class:nothing onclick={handleClick}>
   <h3>{item?.name || "Nothing"}</h3>
   <div class="details">
     <span>{item?.serial || ""}</span>

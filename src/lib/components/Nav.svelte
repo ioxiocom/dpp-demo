@@ -10,7 +10,7 @@
 
   let item: Item = $derived(page.data.item)
   let user: User = $derived(page.data.user)
-  let open = $state(true)
+  let { open = $bindable(false) } = $props()
 
   async function toggleMenu() {
     if (user.role) {
@@ -26,6 +26,11 @@
     open = false
     await invalidateAll()
     await goto(page.url)
+  }
+
+  async function selectItem(item: Item) {
+    await goto(`/item/${item.product}/${item.serial}/`)
+    open = false
   }
 
   const rotate90 = { style: "transform: rotate(90deg)" }
@@ -51,7 +56,7 @@
       {/if}
       <div class="current">
         <h2>Selected item</h2>
-        <ItemComponent {item} selected />
+        <ItemComponent {item} selected onClick={selectItem} />
       </div>
       <div class="parent">
         <h2 class="part-title">
@@ -60,7 +65,7 @@
         </h2>
         {#if item.parentId}
           {@const _item = getItemById(item.parentId)}
-          <ItemComponent item={_item} />
+          <ItemComponent item={_item} onClick={selectItem} />
         {:else}
           <ItemComponent />
         {/if}
@@ -73,7 +78,7 @@
         {#if item.childIds.length > 0}
           {#each item.childIds as id}
             {@const _item = getItemById(id)}
-            <ItemComponent item={_item} />
+            <ItemComponent item={_item} onClick={selectItem} />
           {/each}
         {:else}
           <ItemComponent />
@@ -87,7 +92,7 @@
   @use "$scss/init" as *;
 
   nav {
-    padding: $default-spacing;
+    padding: 1rem 1rem 0 1rem;
   }
 
   .navbar {
@@ -127,7 +132,8 @@
       gap: 1.5rem;
     }
 
-    .parent, .children {
+    .parent,
+    .children {
       display: flex;
       flex-direction: column;
       gap: $default-spacing;

@@ -23,7 +23,9 @@
   <img class="item-image" src={item.imageUrl} alt="" />
 
   {#if user.role}
-    <h3>Data available for users with the role {roleNames[user.role]}</h3>
+    <div class="data-products-header">
+      <h3>Data available for users with the role {roleNames[user.role]}</h3>
+    </div>
     <div class="data-products">
       {#each item.availableData as dataproduct}
         {#if dataproduct.roles.includes(user.role)}
@@ -96,8 +98,15 @@
     padding: 0 $default-spacing;
   }
 
-  h3 {
-    text-align: center;
-    padding: 1rem 0;
+  .data-products-header {
+    padding: 1rem;
+
+    h3 {
+      background-color: #e6ebff;
+      text-align: center;
+      color: #1441f5;
+      font-weight: 400;
+      padding: 0.5rem 0;
+    }
   }
 </style>

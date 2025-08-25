@@ -4,6 +4,7 @@
   import { supportedDataProducts } from "$lib/dataproducts"
   import type { Component } from "svelte"
   import { onNavigate } from "$app/navigation"
+  import Loading from "$lib/components/Loading.svelte"
 
   let dataProduct: DataProduct = $props()
   let DataProductComponent: Component<any> | undefined = $derived(
@@ -42,13 +43,13 @@
     <span>{dataProduct.name}</span>
     <div class="request">
       {#if DataProductComponent}
-        <button class="btn small"onclick={fetchData} class:error>
+        <button class="btn small" onclick={fetchData} class:error disabled={loading}>
           {#if error}
             Error, please try again.
           {:else if !loading}
             Request latest data
           {:else}
-            Loading...
+            <Loading />
           {/if}
         </button>
       {:else}
@@ -70,7 +71,7 @@
   @use "$scss/init" as *;
 
   .box {
-    border: 1px solid #E6E6E6;
+    border: 1px solid #e6e6e6;
     padding: 1rem;
 
     &.unsupported {
@@ -93,6 +94,11 @@
     }
 
     &.open {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
       .request {
         display: none;
       }

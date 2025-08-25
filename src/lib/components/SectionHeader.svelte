@@ -18,7 +18,7 @@
   .description {
     font-size: 0.75rem;
     font-weight: 400;
-    color: white;
+    color: #6f6f6f;
     margin-bottom: 1rem;
   }
 </style>

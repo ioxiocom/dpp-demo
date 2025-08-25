@@ -2,7 +2,7 @@
 
 <style lang="scss">
   .divider {
-    border-bottom: 1px solid #1e1e1e;
+    border-bottom: 1px solid #e6e6e6;
     margin-bottom: 1rem;
   }
 </style>

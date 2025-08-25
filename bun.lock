@@ -4,7 +4,7 @@
     "": {
       "name": "dpp-demo",
       "dependencies": {
-        "@fontsource-variable/inter": "^5.2.6",
+        "@fontsource/inter": "^5.2.6",
         "@fontsource/istok-web": "^5.2.6",
         "@fontsource/poppins": "^5.2.6",
         "@poppanator/sveltekit-svg": "^5.0.1",
@@ -82,7 +82,7 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.6", "", { "os": "win32", "cpu": "x64" }, "sha512-NgJPHHbEpLQgDH2MjQu90pzW/5vvXIZ7KOnPyNBm92A6WgZ/7b6fJyUBjoumLqeOQQGqY2QjQxRo97ah4Sj0cA=="],
 
-    "@fontsource-variable/inter": ["@fontsource-variable/inter@5.2.6", "", {}, "sha512-jks/bficUPQ9nn7GvXvHtlQIPudW7Wx8CrlZoY8bhxgeobNxlQan8DclUJuYF2loYRrGpfrhCIZZspXYysiVGg=="],
+    "@fontsource/inter": ["@fontsource/inter@5.2.6", "", {}, "sha512-CZs9S1CrjD0jPwsNy9W6j0BhsmRSQrgwlTNkgQXTsAeDRM42LBRLo3eo9gCzfH4GvV7zpyf78Ozfl773826csw=="],
 
     "@fontsource/istok-web": ["@fontsource/istok-web@5.2.6", "", {}, "sha512-+dCGBSsEl3qL9YARU1lB/gRBcmsV7q7+5DFRzEz0lgpM8Q/sQ6Bx7sqmEKFxUeUR8ozroSYPwCVOobmsZ8ZKjQ=="],
 

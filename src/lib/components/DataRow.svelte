@@ -1,6 +1,6 @@
 <script lang="ts">
-  import TrueIcon from "$lib/assets/true-circle.svg?component"
-  import FalseIcon from "$lib/assets/false-circle.svg?component"
+  import TrueIcon from "$lib/assets/true-circle.svg?uri"
+  import FalseIcon from "$lib/assets/false-circle.svg?uri"
 
   export let label: string
   export let value: string | string[] | boolean | null | undefined
@@ -65,14 +65,14 @@
   }
 
   .label {
-    flex: 0 0 45%;
+    flex: 0 0 55%;
     line-height: 150%;
     padding-right: 0.5rem;
   }
 
   .value {
     line-height: 150%;
-    flex: 0 0 55%;
+    flex: 0 0 45%;
     word-break: break-word;
 
     a {

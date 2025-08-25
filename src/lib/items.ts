@@ -39,8 +39,17 @@ export const items: { [id: ItemID]: Item } = {
     ],
     availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Measurement report",
+        definition: "Product/MetalComponent/MeasurementReport_v0.3",
+        source: "foo",
+        args: {
+          serial: "L082566",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Traceability report",
+        definition: "Product/MetalComponent/Traceability_v0.3",
         source: "foo",
         args: {
           serial: "L082566",
