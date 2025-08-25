@@ -11,7 +11,6 @@
 
   .container {
     margin: 0 auto;
-    /* padding: $default-spacing; */
     max-width: $max-width;
   }
 </style>
