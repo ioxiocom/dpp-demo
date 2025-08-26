@@ -43,7 +43,7 @@
     <span>{dataProduct.name}</span>
     <div class="request">
       {#if DataProductComponent}
-        <button class="btn small" onclick={fetchData} class:error disabled={loading}>
+        <button class="btn small" onclick={fetchData} class:error disabled={loading} class:wide={loading}>
           {#if error}
             Error, please try again.
           {:else if !loading}

@@ -18,18 +18,20 @@
   let isMenuOpen = $state(false)
 </script>
 
-<Nav bind:open={isMenuOpen} />
+<div class="layout-wrapper">
+  <Nav bind:open={isMenuOpen} />
 
-{#if !isMenuOpen}
-  <main class="container">
-    <section class="content-container">
-      {@render children()}
-    </section>
-  </main>
-  <footer>
-    Powered by <a href="https://ioxio.com">IOXIO</a>
-  </footer>
-{/if}
+  {#if !isMenuOpen}
+    <main class="container">
+      <section class="content-container">
+        {@render children()}
+      </section>
+    </main>
+    <footer>
+      Powered by <a href="https://ioxio.com">IOXIO</a>
+    </footer>
+  {/if}
+</div>
 
 <style lang="scss">
   @use "$scss/init" as *;
@@ -41,6 +43,15 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  .layout-wrapper {
+    margin: 0 auto;
+    max-width: 42rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
 
   main {

@@ -3,6 +3,7 @@
   import DataProduct from "$lib/components/DataProduct.svelte"
   import LockIcon from "$lib/assets/lock-icon.svg?component"
   import { roleNames } from "$lib/state.svelte"
+  import SandvikLogo from "$lib/assets/sandvik-logo.svg?component"
 
   import type { PageProps } from "./$types"
   import { startLogin } from "$lib/state.svelte"
@@ -18,7 +19,11 @@
       <h1>{item.name}</h1>
       <h2>{item.serial}</h2>
     </div>
-    <div></div>
+    <div class="logo">
+      {#if item.manufacturer === "Sandvik"}
+        <SandvikLogo />
+      {/if}
+    </div>
   </div>
   <img class="item-image" src={item.imageUrl} alt="" />
 
@@ -72,6 +77,10 @@
         color: #6f6f6f;
         margin: 0;
       }
+    }
+
+    :global(.logo svg) {
+      height: 1rem;
     }
   }
 

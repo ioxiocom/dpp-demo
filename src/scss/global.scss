@@ -23,6 +23,8 @@ button.btn {
   color: #fff;
   border: none;
   font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
 
   &.outlined {
     background: #fff;
@@ -37,6 +39,10 @@ button.btn {
 
   &:disabled {
     background-color: #e6e6e6;
+  }
+
+  &.wide {
+    min-width: 11rem;
   }
 }
 
