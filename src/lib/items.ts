@@ -35,7 +35,7 @@ export const items: { [id: ItemID]: Item } = {
       "BG00787392_09N25",
       "55057798_TW711338",
       "BG01127113_C25TF",
-      "BG00737500_K23-38",
+      "BG00862174_K23-38",
     ],
     availableData: [
       {
@@ -57,12 +57,12 @@ export const items: { [id: ItemID]: Item } = {
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Current weather (REAL)",
-        definition: "Meteorology/Weather_v0.1",
-        source: "ioxio:visual_crossing",
+        name: "Product carbon footprint",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
+        source: "foo",
         args: {
-          lat: "59.43",
-          lon: "24.75",
+          item: "RDX5 Rock Drill",
+          serial: "L082566",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -70,7 +70,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "BG00788225_T2-3265": {
-    name: "Housing, Gear",
+    name: "Housing gear",
     product: "BG00788225",
     serial: "T2-3265",
     manufacturer: "Sandvik",
@@ -105,7 +105,7 @@ export const items: { [id: ItemID]: Item } = {
     serial: "43496",
     manufacturer: "Ita Nordic",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
-    childIds: [],
+    childIds: ["55003691_M11411521", "9733978_M11967763"],
     availableData: [
       {
         name: "Product data sheet (MOCK)",
@@ -129,6 +129,46 @@ export const items: { [id: ItemID]: Item } = {
     ],
   },
 
+  "55003691_M11411521": {
+    name: "Accumulator base",
+    product: "55003691",
+    serial: "M11411521",
+    manufacturer: "Ita Nordic",
+    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    childIds: [],
+    availableData: [
+      {
+        name: "Product data sheet (MOCK)",
+        definition: "Foo/Bar",
+        source: "foo",
+        args: {
+          serial: "43496",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+    ],
+  },
+
+  "9733978_M11967763": {
+    name: "Accumulator cover",
+    product: "9733978",
+    serial: "M11967763",
+    manufacturer: "Ita Nordic",
+    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    childIds: [],
+    availableData: [
+      {
+        name: "Product data sheet (MOCK)",
+        definition: "Foo/Bar",
+        source: "foo",
+        args: {
+          serial: "43496",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+    ],
+  },
+
   BG00790833_8675: {
     name: "Flushing device",
     product: "BG00790833",
@@ -146,21 +186,11 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
-      {
-        name: "Current weather (REAL)",
-        definition: "Meteorology/Weather_v0.1",
-        source: "ioxio:visual_crossing",
-        args: {
-          lat: "59.43",
-          lon: "24.75",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
     ],
   },
 
   BG00787392_09N25: {
-    name: "Housing, Seal",
+    name: "Housing seal",
     product: "BG00787392",
     serial: "09N25",
     manufacturer: "Nomet",
@@ -176,50 +206,11 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
-      {
-        name: "Fail test (ERROR)",
-        definition: "Foo/Bar",
-        source: "foo",
-        args: {
-          serial: "abc123",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
-      {
-        name: "Product carbon footprint",
-        definition: "Product/Sustainability/CarbonFootprint_v0.1",
-        source: "foo",
-        args: {
-          item: "Transmission",
-          serial: "09N25",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
-      {
-        name: "Traceability report",
-        definition: "Traceability",
-        source: "foo",
-        args: {
-          item: "Transmission",
-          serial: "09N25",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
-      {
-        name: "Measurement report",
-        definition: "Measurement",
-        source: "foo",
-        args: {
-          item: "Transmission",
-          serial: "09N25",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
     ],
   },
 
   "55057798_TW711338": {
-    name: "Bushing, Rotation",
+    name: "Bushing rotation",
     product: "55057798",
     serial: "TW711338",
     manufacturer: "Tasowheel",
@@ -235,21 +226,11 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
-      {
-        name: "Current weather (REAL)",
-        definition: "Meteorology/Weather_v0.1",
-        source: "ioxio:visual_crossing",
-        args: {
-          lat: "59.43",
-          lon: "24.75",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
     ],
   },
 
   BG01127113_C25TF: {
-    name: "Rotation, Shaft",
+    name: "Rotation shaft",
     product: "BG01127113",
     serial: "C25TF",
     manufacturer: "Hanza",
@@ -265,22 +246,12 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
-      {
-        name: "Current weather (REAL)",
-        definition: "Meteorology/Weather_v0.1",
-        source: "ioxio:visual_crossing",
-        args: {
-          lat: "59.43",
-          lon: "24.75",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
     ],
   },
 
-  "BG00737500_K23-38": {
+  "BG00862174_K23-38": {
     name: "Cylinder",
-    product: "BG00737500",
+    product: "BG00862174",
     serial: "K23-38",
     manufacturer: "Sandvik",
     imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
@@ -292,16 +263,6 @@ export const items: { [id: ItemID]: Item } = {
         source: "foo",
         args: {
           serial: "K23-38",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
-      {
-        name: "Current weather (REAL)",
-        definition: "Meteorology/Weather_v0.1",
-        source: "ioxio:visual_crossing",
-        args: {
-          lat: "59.43",
-          lon: "24.75",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },

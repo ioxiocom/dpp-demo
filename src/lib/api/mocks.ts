@@ -35,8 +35,8 @@ export const mocks: Mock[] = [
     definition: "Product/Sustainability/CarbonFootprint_v0.1",
     source: "foo",
     args: {
-      item: "Transmission",
-      serial: "09N25",
+      item: "RDX5 Rock Drill",
+      serial: "L082566",
     },
     response: {
       materialFootprint: 4.8,
