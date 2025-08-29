@@ -31,7 +31,9 @@
       {/if}
     </div>
   </div>
-  <img class="item-image" src={item.imageUrl} alt="" />
+  <div class="item-image-container">
+    <img class="item-image" src={item.imageUrl} alt="" />
+  </div>
 
   {#if user.role}
     <div class="data-products-header">
@@ -95,9 +97,17 @@
     }
   }
 
-  .item-image {
-    width: 100%;
+  .item-image-container {
     background: #000;
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .item-image {
+      width: 100%;
+    }
   }
 
   .not-logged-in {
