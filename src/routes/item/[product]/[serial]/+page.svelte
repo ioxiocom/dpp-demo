@@ -1,9 +1,7 @@
 <script lang="ts">
-  import Container from "$lib/components/Container.svelte"
   import DataProduct from "$lib/components/DataProduct.svelte"
   import LockIcon from "$lib/assets/lock-icon.svg?component"
   import { roleNames } from "$lib/state.svelte"
-  import SandvikLogo from "$lib/assets/sandvik-logo.svg?component"
 
   import type { PageProps } from "./$types"
   import { startLogin } from "$lib/state.svelte"
@@ -21,7 +19,15 @@
     </div>
     <div class="logo">
       {#if item.manufacturer === "Sandvik"}
-        <SandvikLogo />
+        <img src="/images/logos/sandvik.png" alt="" />
+      {:else if item.manufacturer === "Ita Nordic"}
+        <img src="/images/logos/ita-nordic.png" alt="" />
+      {:else if item.manufacturer === "Nomet"}
+        <img src="/images/logos/nomet.png" alt="" />
+      {:else if item.manufacturer === "Tasowheel"}
+        <img src="/images/logos/tasowheel.png" alt="" />
+      {:else if item.manufacturer === "Hanza"}
+        <img src="/images/logos/hanza.png" alt="" />
       {/if}
     </div>
   </div>
@@ -55,6 +61,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     padding: 1.5rem;
 
     .text {
@@ -79,13 +86,18 @@
       }
     }
 
-    :global(.logo svg) {
-      height: 1rem;
+    .logo {
+      flex-shrink: 0;
+    }
+
+    :global(.logo img) {
+      height: 1.5rem;
     }
   }
 
   .item-image {
     width: 100%;
+    background: #000;
   }
 
   .not-logged-in {

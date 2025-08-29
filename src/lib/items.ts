@@ -27,7 +27,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "BG00928740",
     serial: "L082566",
     manufacturer: "Sandvik",
-    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    imageUrl: "/images/items/RDX5-Drill.png",
     childIds: [
       "BG00788225_T2-3265",
       "55003625_43496",
@@ -74,7 +74,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "BG00788225",
     serial: "T2-3265",
     manufacturer: "Sandvik",
-    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    imageUrl: "/images/items/Housing-gear.png",
     childIds: [],
     availableData: [
       {
@@ -104,7 +104,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "55003625",
     serial: "43496",
     manufacturer: "Ita Nordic",
-    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    imageUrl: "/images/items/Accumulator.png",
     childIds: ["55003691_M11411521", "9733978_M11967763"],
     availableData: [
       {
@@ -134,7 +134,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "55003691",
     serial: "M11411521",
     manufacturer: "Ita Nordic",
-    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    imageUrl: "/images/items/Accumulator.png",
     childIds: [],
     availableData: [
       {
@@ -154,7 +154,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "9733978",
     serial: "M11967763",
     manufacturer: "Ita Nordic",
-    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    imageUrl: "/images/items/Accumulator.png",
     childIds: [],
     availableData: [
       {
@@ -174,7 +174,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "BG00790833",
     serial: "8675",
     manufacturer: "Ita Nordic",
-    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    imageUrl: "/images/items/Flushing-device.png",
     childIds: [],
     availableData: [
       {
@@ -194,7 +194,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "BG00787392",
     serial: "09N25",
     manufacturer: "Nomet",
-    imageUrl: "/images/items/Transmission_BG00788225.png",
+    imageUrl: "/images/items/Housing-seal.png",
     childIds: [],
     availableData: [
       {
@@ -214,7 +214,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "55057798",
     serial: "TW711338",
     manufacturer: "Tasowheel",
-    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    imageUrl: "/images/items/Bushing-rotation.png",
     childIds: [],
     availableData: [
       {
@@ -234,7 +234,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "BG01127113",
     serial: "C25TF",
     manufacturer: "Hanza",
-    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    imageUrl: "/images/items/Rotation-shaft.png",
     childIds: [],
     availableData: [
       {
@@ -254,7 +254,7 @@ export const items: { [id: ItemID]: Item } = {
     product: "BG00862174",
     serial: "K23-38",
     manufacturer: "Sandvik",
-    imageUrl: "/images/items/RDX5_Drill_BG00928740.png",
+    imageUrl: "/images/items/Cylinder-vertical.png",
     childIds: [],
     availableData: [
       {
