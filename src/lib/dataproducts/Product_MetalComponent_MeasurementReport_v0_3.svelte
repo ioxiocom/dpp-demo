@@ -73,7 +73,7 @@
         <DataRow label="Upper tolerance" value={formatNumberPrecision(result.upperTolerance || 0, 3, "mm")} />
         <DataRow label="Lower tolerance" value={formatNumberPrecision(result.lowerTolerance || 0, 3, "mm")} />
         <DataRow label="Deviation" value={formatNumberPrecision(result.deviation || 0, 3, "mm")} />
-        <DataRow label="Within tolerance?" value={result.isWithinTolerance} />
+        <DataRow label="Within tolerance" value={result.isWithinTolerance} />
       </div>
       <Divider />
     {/each}

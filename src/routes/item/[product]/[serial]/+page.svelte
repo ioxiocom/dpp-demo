@@ -111,7 +111,8 @@
   }
 
   .not-logged-in {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
