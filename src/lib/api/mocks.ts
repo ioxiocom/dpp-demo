@@ -5,6 +5,50 @@ export type Mock = {
   response: object
 }
 
+const TRACEABILITY_EXAMPLE_RESPONSE = {
+  manufacturingDate: "2025-02-06",
+  deliveryDate: "2025-03-07",
+  componentIdentification: {
+    name: "string",
+    subComponentDeclaration: [
+      {
+        name: "metal fastener",
+        identifier: "batch-2024-ssbolt-0037",
+      },
+    ],
+    purchaseOrder: "2345",
+    workOrder: "wo-2025-0001",
+    shipmentId: "19910123456784",
+    blanks: [
+      {
+        identifier: "st-42crmo4-blt-ht1234-btch5678",
+        type: "forging billet",
+      },
+    ],
+    codeNomenclature: "73269010",
+    drawingNumber: "12345",
+    drawingRevision: "Rev A",
+  },
+  manufacturerInformation: {
+    name: "Company xyz",
+    identification: {
+      identifierScheme: "gln",
+      identifier: "1234567890123",
+    },
+    address: "Rue des Lilas 12, 1050 Bruxelles, Belgium",
+    contactEmail: "contact@company.com",
+  },
+  processIdentification: {
+    identifier: "procset-metal-2024-0458",
+  },
+}
+
+const CARBON_FOOTPRINT_EXAMPLE_RESPONSE = {
+  materialFootprint: 1.23,
+  processingFootprint: 2.45,
+  logisticsFootprint: 0.18,
+}
+
 export const mocks: Mock[] = [
   // Foo/Bar?source=foo BG00928740
   {
@@ -35,14 +79,81 @@ export const mocks: Mock[] = [
     definition: "Product/Sustainability/CarbonFootprint_v0.1",
     source: "foo",
     args: {
-      item: "RDX5 Rock Drill",
+      item: "BG00928740",
       serial: "L082566",
     },
     response: {
-      materialFootprint: 4.8,
-      processingFootprint: 5.3,
-      logisticsFootprint: 0.3,
+      materialFootprint: 574.66,
+      processingFootprint: 62.13,
+      logisticsFootprint: 4.92,
     },
+  },
+  {
+    definition: "Product/Sustainability/CarbonFootprint_v0.1",
+    source: "foo",
+    args: {
+      item: "BG00788225",
+      serial: "T2-3265",
+    },
+    response: {
+      materialFootprint: 207.35,
+      processingFootprint: 22.39,
+      logisticsFootprint: 1.89,
+    },
+  },
+  {
+    definition: "Product/Sustainability/CarbonFootprint_v0.1",
+    source: "foo",
+    args: {
+      item: "55003625",
+      serial: "43496",
+    },
+    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
+  },
+  {
+    definition: "Product/Sustainability/CarbonFootprint_v0.1",
+    source: "foo",
+    args: {
+      item: "55003691",
+      serial: "M11411521",
+    },
+    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
+  },
+  {
+    definition: "Product/Sustainability/CarbonFootprint_v0.1",
+    source: "foo",
+    args: {
+      item: "9733978",
+      serial: "M11967763",
+    },
+    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
+  },
+  {
+    definition: "Product/Sustainability/CarbonFootprint_v0.1",
+    source: "foo",
+    args: {
+      item: "BG00790833",
+      serial: "8675",
+    },
+    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
+  },
+  {
+    definition: "Product/Sustainability/CarbonFootprint_v0.1",
+    source: "foo",
+    args: {
+      item: "55057798",
+      serial: "TW711338",
+    },
+    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
+  },
+  {
+    definition: "Product/Sustainability/CarbonFootprint_v0.1",
+    source: "foo",
+    args: {
+      item: "BG01127113",
+      serial: "C25TF",
+    },
+    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
   },
 
   // Product/MetalComponent/MeasurementReport_v0.3
@@ -50,7 +161,7 @@ export const mocks: Mock[] = [
     definition: "Product/MetalComponent/MeasurementReport_v0.3",
     source: "foo",
     args: {
-      serial: "L082566",
+      serial: "09N25",
     },
     response: {
       componentIdentification: {
@@ -97,45 +208,33 @@ export const mocks: Mock[] = [
     definition: "Product/MetalComponent/Traceability_v0.3",
     source: "foo",
     args: {
-      serial: "L082566",
+      serial: "43496",
     },
-    response: {
-      manufacturingDate: "2025-02-06",
-      deliveryDate: "2025-03-07",
-      componentIdentification: {
-        name: "string",
-        subComponentDeclaration: [
-          {
-            name: "metal fastener",
-            identifier: "batch-2024-ssbolt-0037",
-          },
-        ],
-        purchaseOrder: "2345",
-        workOrder: "wo-2025-0001",
-        shipmentId: "19910123456784",
-        blanks: [
-          {
-            identifier: "st-42crmo4-blt-ht1234-btch5678",
-            type: "forging billet",
-          },
-        ],
-        codeNomenclature: "73269010",
-        drawingNumber: "12345",
-        drawingRevision: "Rev A",
-      },
-      manufacturerInformation: {
-        name: "Company xyz",
-        identification: {
-          identifierScheme: "gln",
-          identifier: "1234567890123",
-        },
-        address: "Rue des Lilas 12, 1050 Bruxelles, Belgium",
-        contactEmail: "contact@company.com",
-      },
-      processIdentification: {
-        identifier: "procset-metal-2024-0458",
-      },
+    response: TRACEABILITY_EXAMPLE_RESPONSE,
+  },
+  {
+    definition: "Product/MetalComponent/Traceability_v0.3",
+    source: "foo",
+    args: {
+      serial: "8675",
     },
+    response: TRACEABILITY_EXAMPLE_RESPONSE,
+  },
+  {
+    definition: "Product/MetalComponent/Traceability_v0.3",
+    source: "foo",
+    args: {
+      serial: "TW711338",
+    },
+    response: TRACEABILITY_EXAMPLE_RESPONSE,
+  },
+  {
+    definition: "Product/MetalComponent/Traceability_v0.3",
+    source: "foo",
+    args: {
+      serial: "C25TF",
+    },
+    response: TRACEABILITY_EXAMPLE_RESPONSE,
   },
 ]
 

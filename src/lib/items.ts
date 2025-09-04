@@ -39,29 +39,11 @@ export const items: { [id: ItemID]: Item } = {
     ],
     availableData: [
       {
-        name: "Measurement report",
-        definition: "Product/MetalComponent/MeasurementReport_v0.3",
-        source: "foo",
-        args: {
-          serial: "L082566",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
-      {
-        name: "Traceability report",
-        definition: "Product/MetalComponent/Traceability_v0.3",
-        source: "foo",
-        args: {
-          serial: "L082566",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
-      {
         name: "Product carbon footprint",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
-          item: "RDX5 Rock Drill",
+          item: "BG00928740",
           serial: "L082566",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
@@ -78,21 +60,12 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Product carbon footprint",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
+          item: "BG00788225",
           serial: "T2-3265",
-        },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
-      },
-      {
-        name: "Current weather (REAL)",
-        definition: "Meteorology/Weather_v0.1",
-        source: "ioxio:visual_crossing",
-        args: {
-          lat: "59.43",
-          lon: "24.75",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -108,21 +81,21 @@ export const items: { [id: ItemID]: Item } = {
     childIds: ["55003691_M11411521", "9733978_M11967763"],
     availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Product carbon footprint",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
+          item: "55003625",
           serial: "43496",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Current weather (REAL)",
-        definition: "Meteorology/Weather_v0.1",
-        source: "ioxio:visual_crossing",
+        name: "Traceability report",
+        definition: "Product/MetalComponent/Traceability_v0.3",
+        source: "foo",
         args: {
-          lat: "59.43",
-          lon: "24.75",
+          serial: "43496",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -138,11 +111,12 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Product carbon footprint",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
-          serial: "43496",
+          item: "55003691",
+          serial: "M11411521",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -158,11 +132,12 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Product carbon footprint",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
-          serial: "43496",
+          item: "9733978",
+          serial: "M11967763",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -178,11 +153,21 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Product carbon footprint",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
-          serial: "BG00928740",
+          item: "BG00790833",
+          serial: "8675",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Traceability report",
+        definition: "Product/MetalComponent/Traceability_v0.3",
+        source: "foo",
+        args: {
+          serial: "8675",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -198,8 +183,8 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Measurement report",
+        definition: "Product/MetalComponent/MeasurementReport_v0.3",
         source: "foo",
         args: {
           serial: "09N25",
@@ -218,8 +203,18 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Product carbon footprint",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
+        source: "foo",
+        args: {
+          item: "55057798",
+          serial: "TW711338",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Traceability report",
+        definition: "Product/MetalComponent/Traceability_v0.3",
         source: "foo",
         args: {
           serial: "TW711338",
@@ -238,8 +233,18 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Product carbon footprint",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
+        source: "foo",
+        args: {
+          item: "BG01127113",
+          serial: "C25TF",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Traceability report",
+        definition: "Product/MetalComponent/Traceability_v0.3",
         source: "foo",
         args: {
           serial: "C25TF",
