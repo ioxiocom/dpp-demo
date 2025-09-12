@@ -23,7 +23,7 @@ export type Item = {
 
 export const items: { [id: ItemID]: Item } = {
   BG00928740_L082566: {
-    name: "RDX5 Rock Drill",
+    name: "RDX5 Rock Drill (Item)",
     product: "BG00928740",
     serial: "L082566",
     manufacturer: "Sandvik",
@@ -35,7 +35,6 @@ export const items: { [id: ItemID]: Item } = {
       "BG00787392_09N25",
       "55057798_TW711338",
       "BG01127113_C25TF",
-      "BG00862174_K23-38",
     ],
     availableData: [
       {
@@ -52,7 +51,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "BG00788225_T2-3265": {
-    name: "Housing gear",
+    name: "Housing gear (Item)",
     product: "BG00788225",
     serial: "T2-3265",
     manufacturer: "Sandvik",
@@ -73,7 +72,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "55003625_43496": {
-    name: "Accumulator",
+    name: "Accumulator (Item)",
     product: "55003625",
     serial: "43496",
     manufacturer: "Ita Nordic",
@@ -103,7 +102,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "55003691_M11411521": {
-    name: "Accumulator base",
+    name: "Base (Item)",
     product: "55003691",
     serial: "M11411521",
     manufacturer: "Ita Nordic",
@@ -124,7 +123,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "9733978_M11967763": {
-    name: "Accumulator cover",
+    name: "Cover (Item)",
     product: "9733978",
     serial: "M11967763",
     manufacturer: "Ita Nordic",
@@ -145,7 +144,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   BG00790833_8675: {
-    name: "Flushing device",
+    name: "Flushing device (Batch)",
     product: "BG00790833",
     serial: "8675",
     manufacturer: "Ita Nordic",
@@ -175,7 +174,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   BG00787392_09N25: {
-    name: "Housing seal",
+    name: "Housing seal (Batch)",
     product: "BG00787392",
     serial: "09N25",
     manufacturer: "Nomet",
@@ -195,7 +194,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "55057798_TW711338": {
-    name: "Bushing rotation",
+    name: "Bushing rotation (Batch)",
     product: "55057798",
     serial: "TW711338",
     manufacturer: "Tasowheel",
@@ -221,11 +220,20 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
+      {
+        name: "Measurement conformity",
+        definition: "Product/MeasurementConformity_v0.1",
+        source: "foo",
+        args: {
+          serial: "TW711338",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
     ],
   },
 
   BG01127113_C25TF: {
-    name: "Rotation shaft",
+    name: "Rotation shaft (Batch)",
     product: "BG01127113",
     serial: "C25TF",
     manufacturer: "Hanza",
@@ -251,23 +259,12 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
-    ],
-  },
-
-  "BG00862174_K23-38": {
-    name: "Cylinder",
-    product: "BG00862174",
-    serial: "K23-38",
-    manufacturer: "Sandvik",
-    imageUrl: "/images/items/Cylinder-vertical.png",
-    childIds: [],
-    availableData: [
       {
-        name: "Product data sheet (MOCK)",
-        definition: "Foo/Bar",
+        name: "Measurement conformity",
+        definition: "Product/MeasurementConformity_v0.1",
         source: "foo",
         args: {
-          serial: "K23-38",
+          serial: "C25TF",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },

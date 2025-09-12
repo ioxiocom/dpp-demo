@@ -50,27 +50,33 @@ const CARBON_FOOTPRINT_EXAMPLE_RESPONSE = {
 }
 
 export const mocks: Mock[] = [
-  // Foo/Bar?source=foo BG00928740
+  // Product/MeasurementConformity_v0.1
   {
-    definition: "Foo/Bar",
+    definition: "Product/MeasurementConformity_v0.1",
     source: "foo",
     args: {
-      serial: "L082566",
+      serial: "C25TF",
     },
     response: {
-      hello: "BG00928740 L082566",
+      inspectionReport: true,
+      inspectionReportUrl: "https://hanza.fi/measurementReport.pdf/?secret_key=1234",
+      statisticalControl: false,
+      processCapability: "Not available",
+      remarks: "Measured with Coordinate Measuring Machine DEA Global S/N GLCI000435",
     },
   },
-
-  // Foo/Bar?source=foo BG00788225
   {
-    definition: "Foo/Bar",
+    definition: "Product/MeasurementConformity_v0.1",
     source: "foo",
     args: {
-      serial: "BG00788225",
+      serial: "TW711338",
     },
     response: {
-      hello: "BG00788225",
+      inspectionReport: true,
+      inspectionReportUrl: "https://tasowheel.fi/measurementReport.pdf/?secret_key=1234",
+      statisticalControl: true,
+      processCapability: "Cp 1.33",
+      remarks: "Measurements according to control plan",
     },
   },
 
