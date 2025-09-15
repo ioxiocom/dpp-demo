@@ -16,7 +16,7 @@ const users: User[] = [
 
 export const config = {
   dataspaceBaseDomain: "ioxio.io",
-  dataspaceGroup: "ioxio",
+  dataspaceGroup: "subcontracting_fair_2025_demo",
   fakeRequestTime: 250, // msec
 
   users: users,
