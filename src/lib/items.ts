@@ -246,10 +246,11 @@ export const items: { [id: ItemID]: Item } = {
       {
         name: "Product carbon footprint",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
-        source: "foo",
+        source: "hanza",
         args: {
-          item: "BG01127113",
-          serial: "C25TF",
+          product: "BG01127115",
+          queryLevel: "batch",
+          id: "C25TF",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -260,6 +261,13 @@ export const items: { [id: ItemID]: Item } = {
         args: {
           serial: "C25TF",
         },
+        // TODO: Switch to this, once the real one is ready
+        // source: "hanza",
+        // args: {
+        //   "product": "BG01127115",
+        //   "queryLevel": "batch",
+        //   "id": "C25TF"
+        // },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
