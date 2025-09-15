@@ -7,10 +7,12 @@ const accessControlKeys: { [definition: string]: { [source: string]: string } } 
   "Meteorology/Weather_v0.1": {
     "ioxio:visual_crossing": env.ACK_METEOROLOGY_WEATHER_IOXIO_VISUAL_CROSSING || "",
   },
-  "MetalComponent/Traceability_v0.3": {
-    tasowheel: env.ACK_METAL_COMPONENT_TRACEABILITY_TASOWHEEL || "",
+  "Product/MetalComponent/Traceability_v0.3": {
+    hanza: env.ACK_PRODUCT_METAL_COMPONENT_TRACEABILITY_HANZA || "",
+    tasowheel: env.ACK_PRODUCT_METAL_COMPONENT_TRACEABILITY_TASOWHEEL || "",
   },
   "Product/Sustainability/CarbonFootprint_v0.1": {
+    hanza: env.ACK_PRODUCT_SUSTAINABILITY_CARBON_FOOTPRINT_HANZA || "",
     tasowheel: env.ACK_PRODUCT_SUSTAINABILITY_CARBON_FOOTPRINT_TASOWHEEL || "",
   },
 }
