@@ -57,8 +57,17 @@
 
   function getCompanyIdentifierDisplay(identification: CompanyIdentification): string {
     if (!identification.identifier) return "-"
-    const scheme = identification.identifierScheme || ""
-    return scheme ? `${identification.identifier} (${scheme})` : identification.identifier
+    const id = identification.identifier
+    switch (identification.identifierScheme) {
+      case "gln":
+        return `${id} (GLN)`
+      case "nationalBusinessId":
+        return `${id} (National business ID)`
+      case "duns":
+        return `${id} (D-U-N-S)`
+      case undefined:
+        return id
+    }
   }
 
   const component = response.componentIdentification
