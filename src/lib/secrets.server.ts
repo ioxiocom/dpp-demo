@@ -8,11 +8,11 @@ const accessControlKeys: { [definition: string]: { [source: string]: string } } 
     "ioxio:visual_crossing": env.ACK_METEOROLOGY_WEATHER_IOXIO_VISUAL_CROSSING || "",
   },
   "MetalComponent/Traceability_v0.3": {
-    "tasowheel": env.ACK_METAL_COMPONENT_TRACEABILITY_TASOWHEEL || "",
+    tasowheel: env.ACK_METAL_COMPONENT_TRACEABILITY_TASOWHEEL || "",
   },
   "Product/Sustainability/CarbonFootprint_v0.1": {
-    "tasowheel": env.ACK_PRODUCT_SUSTAINABILITY_CARBON_FOOTPRINT_TASOWHEEL || "",
-  }
+    tasowheel: env.ACK_PRODUCT_SUSTAINABILITY_CARBON_FOOTPRINT_TASOWHEEL || "",
+  },
 }
 
 export const secrets = {
