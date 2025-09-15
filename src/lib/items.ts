@@ -257,17 +257,12 @@ export const items: { [id: ItemID]: Item } = {
       {
         name: "Traceability report",
         definition: "Product/MetalComponent/Traceability_v0.3",
-        source: "foo",
+        source: "hanza",
         args: {
-          serial: "C25TF",
+          product: "BG01127115",
+          queryLevel: "batch",
+          id: "C25TF",
         },
-        // TODO: Switch to this, once the real one is ready
-        // source: "hanza",
-        // args: {
-        //   "product": "BG01127115",
-        //   "queryLevel": "batch",
-        //   "id": "C25TF"
-        // },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {

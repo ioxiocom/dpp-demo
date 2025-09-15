@@ -208,15 +208,6 @@ export const mocks: Mock[] = [
     },
     response: TRACEABILITY_EXAMPLE_RESPONSE,
   },
-  // TODO: Remove this, once the real one is ready
-  {
-    definition: "Product/MetalComponent/Traceability_v0.3",
-    source: "foo",
-    args: {
-      serial: "C25TF",
-    },
-    response: TRACEABILITY_EXAMPLE_RESPONSE,
-  },
 ]
 
 export function getMock(definition: string, source: string, data: object): Mock {
