@@ -204,19 +204,22 @@ export const items: { [id: ItemID]: Item } = {
       {
         name: "Product carbon footprint",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
-        source: "foo",
+        source: "tasowheel",
         args: {
-          item: "55057798",
-          serial: "TW711338",
+          product: "55057794",
+          queryLevel: "batch",
+          id: "711338",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Traceability report",
         definition: "Product/MetalComponent/Traceability_v0.3",
-        source: "foo",
+        source: "tasowheel",
         args: {
-          serial: "TW711338",
+          product: "55057794",
+          queryLevel: "batch",
+          id: "711338",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },

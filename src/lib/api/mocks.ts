@@ -147,15 +147,6 @@ export const mocks: Mock[] = [
     definition: "Product/Sustainability/CarbonFootprint_v0.1",
     source: "foo",
     args: {
-      item: "55057798",
-      serial: "TW711338",
-    },
-    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
-  },
-  {
-    definition: "Product/Sustainability/CarbonFootprint_v0.1",
-    source: "foo",
-    args: {
       item: "BG01127113",
       serial: "C25TF",
     },
@@ -223,14 +214,6 @@ export const mocks: Mock[] = [
     source: "foo",
     args: {
       serial: "8675",
-    },
-    response: TRACEABILITY_EXAMPLE_RESPONSE,
-  },
-  {
-    definition: "Product/MetalComponent/Traceability_v0.3",
-    source: "foo",
-    args: {
-      serial: "TW711338",
     },
     response: TRACEABILITY_EXAMPLE_RESPONSE,
   },
