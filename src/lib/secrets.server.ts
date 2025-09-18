@@ -13,6 +13,7 @@ const accessControlKeys: { [definition: string]: { [source: string]: string } } 
   },
   "Product/Sustainability/CarbonFootprint_v0.1": {
     hanza: env.ACK_PRODUCT_SUSTAINABILITY_CARBON_FOOTPRINT_HANZA || "",
+    nomet: env.ACK_PRODUCT_SUSTAINABILITY_CARBON_FOOTPRINT_NOMET || "",
     tasowheel: env.ACK_PRODUCT_SUSTAINABILITY_CARBON_FOOTPRINT_TASOWHEEL || "",
   },
 }
