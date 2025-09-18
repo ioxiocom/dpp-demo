@@ -182,6 +182,17 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
+        name: "Product carbon footprint",
+        definition: "Product/Sustainability/CarbonFootprint_v0.1",
+        source: "nomet",
+        args: {
+          product: "BG00787392",
+          queryLevel: "item",
+          id: "09N25",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
         name: "Measurement report",
         definition: "Product/MetalComponent/MeasurementReport_v0.3",
         source: "foo",
