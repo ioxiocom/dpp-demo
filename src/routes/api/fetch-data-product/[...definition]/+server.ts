@@ -25,7 +25,12 @@ export const POST: RequestHandler = async ({ fetch, url, params, request }) => {
 
   if (response.ok) {
     console.log(`Fetched ${definition} from ${source}`)
-    return new Response(JSON.stringify(await response.json()))
+    const finalResponse = new Response(JSON.stringify(await response.json()))
+    const serverTiming = response.headers.get("Server-Timing")
+    if (serverTiming) {
+      finalResponse.headers.set("Server-Timing", serverTiming)
+    }
+    return finalResponse
   }
 
   console.error(
