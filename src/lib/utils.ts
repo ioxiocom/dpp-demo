@@ -22,7 +22,7 @@ export function formatNumber(input: number, unit = ""): string {
   return result
 }
 
-export function formatNumberPrecision(input: number, precision = 2, unit = ""): string {
+export function formatNumberPrecision(input: number | null | undefined, precision = 2, unit = ""): string {
   if (input === 0 || input === null || input === undefined) {
     return "-"
   }
