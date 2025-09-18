@@ -12,7 +12,7 @@
   }
 
   const totalFootprint =
-    response.logisticsFootprint + response.materialFootprint + response.processingFootprint
+    response.logisticsFootprint ?? 0 + response.materialFootprint ?? 0 + response.processingFootprint ?? 0
 </script>
 
 <Article>
