@@ -6,13 +6,15 @@
   import SectionHeader from "$lib/components/SectionHeader.svelte"
 
   export let response: {
-    logisticsFootprint: number
-    materialFootprint: number
-    processingFootprint: number
+    logisticsFootprint?: number
+    materialFootprint?: number
+    processingFootprint?: number
   }
 
   const totalFootprint =
-    response.logisticsFootprint + response.materialFootprint + response.processingFootprint
+    (response.logisticsFootprint || 0) +
+    (response.materialFootprint || 0) +
+    (response.processingFootprint || 0)
 </script>
 
 <Article>
