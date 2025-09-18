@@ -1,12 +1,14 @@
 <script lang="ts">
   import type { Item } from "$lib/items"
+  import Self from "./Item.svelte"
+  import { page } from "$app/state"
 
   type Props = {
     item?: Item
-    selected?: boolean
     onClick?: (item: Item) => void
+    level?: number
   }
-  let { item, selected, onClick }: Props = $props()
+  let { item, onClick, level = 0 }: Props = $props()
 
   function handleClick() {
     if (item && onClick) {
@@ -15,25 +17,44 @@
   }
 
   const nothing = $derived(typeof item === "undefined")
+  const selected = $derived(page.params.product === item?.product && page.params.serial === item?.serial)
 </script>
 
-<button class="item" class:selected class:nothing onclick={handleClick}>
+<button
+  class="item"
+  class:selected
+  class:nothing
+  onclick={handleClick}
+  style={`--padding: ${level * 1.5}rem;`}
+>
   <h3>{item?.name || "Nothing"}</h3>
   <div class="details">
     <span>{item?.serial || ""}</span>
     <h4>{item?.manufacturer || ""}</h4>
   </div>
 </button>
+{#each item?.children || [] as child}
+  <Self item={child} {onClick} level={level + 1} />
+{/each}
 
 <style lang="scss">
   @use "$scss/init" as *;
-
+  .children {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .children-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
   .item {
     border: 1px solid black;
     padding: 1rem;
     user-select: none;
-    width: 100%;
     background-color: #fff;
+    margin-left: var(--padding);
 
     h3 {
       margin: 0;

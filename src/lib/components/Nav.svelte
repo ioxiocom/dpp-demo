@@ -1,12 +1,11 @@
 <script lang="ts">
   import { page } from "$app/state"
-  import { getItemById, type Item } from "$lib/items"
+  import { type Item, itemTree } from "$lib/items"
   import { goto, invalidateAll } from "$app/navigation"
   import SandvikLogo from "$lib/assets/sandvik-logo.svg?component"
   import Hamburger from "$lib/assets/hamburger.svg?component"
   import { login, roleNames, startLogin, unauthenticated, type User } from "$lib/state.svelte"
   import ItemComponent from "./Item.svelte"
-  import ArrowLeftDown from "$lib/assets/arrow-left-down.svg?component"
 
   let item: Item = $derived(page.data.item)
   let user: User = $derived(page.data.user)
@@ -32,8 +31,6 @@
     await goto(`/item/${item.product}/${item.serial}/`)
     open = false
   }
-
-  const rotate90 = { style: "transform: rotate(90deg)" }
 </script>
 
 <nav>
@@ -54,36 +51,9 @@
         </div>
         <hr />
       {/if}
-      <div class="current">
-        <h2>Selected item</h2>
-        <ItemComponent {item} selected onClick={selectItem} />
-      </div>
-      <div class="parent">
-        <h2 class="part-title">
-          <ArrowLeftDown width="16" height="16" />
-          <span>Selected item is a part of</span>
-        </h2>
-        {#if item.parentId}
-          {@const _item = getItemById(item.parentId)}
-          <ItemComponent item={_item} onClick={selectItem} />
-        {:else}
-          <ItemComponent />
-        {/if}
-      </div>
-      <div class="children">
-        <h2 class="part-title">
-          <ArrowLeftDown width="16" height="16" {...rotate90} />
-          <span>Parts of the selected item</span>
-        </h2>
-        {#if item.childIds.length > 0}
-          {#each item.childIds as id}
-            {@const _item = getItemById(id)}
-            <ItemComponent item={_item} onClick={selectItem} />
-          {/each}
-        {:else}
-          <ItemComponent />
-        {/if}
-      </div>
+      {#each itemTree as item}
+        <ItemComponent {item} onClick={selectItem} />
+      {/each}
     </div>
   {/if}
 </nav>
@@ -92,7 +62,7 @@
   @use "$scss/init" as *;
 
   nav {
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
   }
 
   .navbar {
@@ -130,30 +100,6 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-    }
-
-    .parent,
-    .children {
-      display: flex;
-      flex-direction: column;
-      gap: $default-spacing;
-    }
-
-    .part-title {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-size: 1.125rem;
-      gap: 0.5rem;
-      font-weight: 400;
-    }
-
-    .details {
-      color: #888;
-      font-size: 14px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
     }
   }
 </style>

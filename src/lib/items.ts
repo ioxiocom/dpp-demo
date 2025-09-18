@@ -19,6 +19,7 @@ export type Item = {
   parentId?: ItemID
   childIds: ItemID[]
   availableData: DataProduct[]
+  children?: Item[]
 }
 
 export const items: { [id: ItemID]: Item } = {
@@ -366,3 +367,19 @@ function init() {
 }
 
 init()
+
+export function makeItemTree(): Item[] {
+  // Add children to items and created a tree structure
+
+  function addChildren(itemId: ItemID): Item {
+    const item = { ...items[itemId] }
+    const children = item.childIds.map((childId) => addChildren(childId))
+
+    return { ...item, children }
+  }
+
+  const rootItemIds = Object.keys(items).filter((itemId) => !items[itemId].parentId)
+  return rootItemIds.map((rootId) => addChildren(rootId))
+}
+
+export const itemTree = makeItemTree()
