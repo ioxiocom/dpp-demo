@@ -99,21 +99,24 @@ export const items: { [id: ItemID]: Item } = {
     childIds: ["55003691_M11411521", "9733978_M11967763"],
     availableData: [
       {
-        name: "Product carbon footprint (MOCK)",
+        name: "Product carbon footprint",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
-        source: "foo",
+        source: "ita_nordic",
         args: {
-          item: "55003625",
-          serial: "43496",
+          product: "55003625",
+          queryLevel: "item",
+          id: "43496",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Traceability report (MOCK)",
+        name: "Traceability report",
         definition: "Product/MetalComponent/Traceability_v0.3",
-        source: "foo",
+        source: "ita_nordic",
         args: {
-          serial: "43496",
+          product: "55003625",
+          queryLevel: "item",
+          id: "43496",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -121,7 +124,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "55003691_M11411521": {
-    name: "Base (Item)",
+    name: "Cover (Item)",
     product: "55003691",
     serial: "M11411521",
     manufacturer: "ITA Nordic",
@@ -129,12 +132,13 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint (MOCK)",
+        name: "Product carbon footprint",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
-        source: "foo",
+        source: "ita_nordic",
         args: {
-          item: "55003691",
-          serial: "M11411521",
+          product: "55003691",
+          queryLevel: "item",
+          id: "M11411521",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -142,7 +146,7 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "9733978_M11967763": {
-    name: "Cover (Item)",
+    name: "Base (Item)",
     product: "9733978",
     serial: "M11967763",
     manufacturer: "ITA Nordic",
@@ -150,12 +154,13 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint (MOCK)",
+        name: "Product carbon footprint",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
-        source: "foo",
+        source: "ita_nordic",
         args: {
-          item: "9733978",
-          serial: "M11967763",
+          product: "9733978",
+          queryLevel: "item",
+          id: "M11967763",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -173,19 +178,22 @@ export const items: { [id: ItemID]: Item } = {
       {
         name: "Product carbon footprint (MOCK)",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
-        source: "foo",
+        source: "ita_nordic",
         args: {
-          item: "BG00790833",
-          serial: "8675",
+          product: "BG00790833",
+          queryLevel: "batch",
+          id: "8675",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Traceability report (MOCK)",
         definition: "Product/MetalComponent/Traceability_v0.3",
-        source: "foo",
+        source: "ita_nordic",
         args: {
-          serial: "8675",
+          product: "BG00790833",
+          queryLevel: "batch",
+          id: "8675",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -206,7 +214,7 @@ export const items: { [id: ItemID]: Item } = {
         source: "nomet",
         args: {
           product: "BG00787392",
-          queryLevel: "item",
+          queryLevel: "batch",
           id: "09N25",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],

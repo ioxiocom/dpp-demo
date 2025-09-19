@@ -131,42 +131,6 @@ export const mocks: Mock[] = [
       logisticsFootprint: 1.89,
     },
   },
-  {
-    definition: "Product/Sustainability/CarbonFootprint_v0.1",
-    source: "foo",
-    args: {
-      item: "55003625",
-      serial: "43496",
-    },
-    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
-  },
-  {
-    definition: "Product/Sustainability/CarbonFootprint_v0.1",
-    source: "foo",
-    args: {
-      item: "55003691",
-      serial: "M11411521",
-    },
-    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
-  },
-  {
-    definition: "Product/Sustainability/CarbonFootprint_v0.1",
-    source: "foo",
-    args: {
-      item: "9733978",
-      serial: "M11967763",
-    },
-    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
-  },
-  {
-    definition: "Product/Sustainability/CarbonFootprint_v0.1",
-    source: "foo",
-    args: {
-      item: "BG00790833",
-      serial: "8675",
-    },
-    response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
-  },
 
   // Product/MetalComponent/Traceability_v0.3
   {
