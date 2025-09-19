@@ -20,7 +20,7 @@
     <div class="logo">
       {#if item.manufacturer === "Sandvik"}
         <img src="/images/logos/sandvik.png" alt="" />
-      {:else if item.manufacturer === "Ita Nordic"}
+      {:else if item.manufacturer === "ITA Nordic"}
         <img src="/images/logos/ita-nordic.png" alt="" />
       {:else if item.manufacturer === "Nomet"}
         <img src="/images/logos/nomet.png" alt="" />

@@ -48,6 +48,15 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
+      {
+        name: "Traceability report",
+        definition: "Product/MetalComponent/Traceability_v0.3",
+        source: "foo",
+        args: {
+          serial: "L082566",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
     ],
   },
 
@@ -69,6 +78,15 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
+      {
+        name: "Traceability report",
+        definition: "Product/MetalComponent/Traceability_v0.3",
+        source: "foo",
+        args: {
+          serial: "T2-3265",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
     ],
   },
 
@@ -76,12 +94,12 @@ export const items: { [id: ItemID]: Item } = {
     name: "Accumulator (Item)",
     product: "55003625",
     serial: "43496",
-    manufacturer: "Ita Nordic",
+    manufacturer: "ITA Nordic",
     imageUrl: "/images/items/Accumulator.png",
     childIds: ["55003691_M11411521", "9733978_M11967763"],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint (MOCK)",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -92,7 +110,7 @@ export const items: { [id: ItemID]: Item } = {
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Traceability report",
+        name: "Traceability report (MOCK)",
         definition: "Product/MetalComponent/Traceability_v0.3",
         source: "ita_nordic",
         args: {
@@ -109,12 +127,12 @@ export const items: { [id: ItemID]: Item } = {
     name: "Cover (Item)",
     product: "55003691",
     serial: "M11411521",
-    manufacturer: "Ita Nordic",
+    manufacturer: "ITA Nordic",
     imageUrl: "/images/items/Accumulator.png",
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint (MOCK)",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -131,12 +149,12 @@ export const items: { [id: ItemID]: Item } = {
     name: "Base (Item)",
     product: "9733978",
     serial: "M11967763",
-    manufacturer: "Ita Nordic",
+    manufacturer: "ITA Nordic",
     imageUrl: "/images/items/Accumulator.png",
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint (MOCK)",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -153,12 +171,12 @@ export const items: { [id: ItemID]: Item } = {
     name: "Flushing device (Batch)",
     product: "BG00790833",
     serial: "8675",
-    manufacturer: "Ita Nordic",
+    manufacturer: "ITA Nordic",
     imageUrl: "/images/items/Flushing-device.png",
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint (MOCK)",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -169,7 +187,7 @@ export const items: { [id: ItemID]: Item } = {
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Traceability report",
+        name: "Traceability report (MOCK)",
         definition: "Product/MetalComponent/Traceability_v0.3",
         source: "ita_nordic",
         args: {
@@ -202,8 +220,8 @@ export const items: { [id: ItemID]: Item } = {
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Measurement report",
-        definition: "Product/MetalComponent/MeasurementReport_v0.3",
+        name: "Measurement conformity",
+        definition: "Product/MeasurementConformity_v0.1",
         source: "foo",
         args: {
           serial: "09N25",
@@ -256,11 +274,11 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   BG01127113_C25TF: {
-    name: "Rotation shaft (Batch)",
+    name: "Housing bearing (Batch)",
     product: "BG01127113",
     serial: "C25TF",
     manufacturer: "Hanza",
-    imageUrl: "/images/items/Rotation-shaft.png",
+    imageUrl: "/images/items/Housing-bearing.png",
     childIds: [],
     availableData: [
       {
