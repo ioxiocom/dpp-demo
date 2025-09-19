@@ -214,7 +214,7 @@ export const items: { [id: ItemID]: Item } = {
         source: "nomet",
         args: {
           product: "BG00787392",
-          queryLevel: "item",
+          queryLevel: "batch",
           id: "09N25",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
