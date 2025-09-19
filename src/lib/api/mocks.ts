@@ -88,6 +88,20 @@ export const mocks: Mock[] = [
       remarks: "Measurements according to control plan",
     },
   },
+  {
+    definition: "Product/MeasurementConformity_v0.1",
+    source: "foo",
+    args: {
+      serial: "09N25",
+    },
+    response: {
+      inspectionReport: true,
+      inspectionReportUrl: "https://nomet.fi/measurementReport.pdf/?secret_key=1234",
+      statisticalControl: true,
+      processCapability: "Cp 1.33",
+      remarks: "Mesaured with Zeiss Prismo 12/24/10",
+    },
+  },
 
   // Product/Sustainability/CarbonFootprint_v0.1
   {
@@ -152,53 +166,6 @@ export const mocks: Mock[] = [
       serial: "8675",
     },
     response: CARBON_FOOTPRINT_EXAMPLE_RESPONSE,
-  },
-
-  // Product/MetalComponent/MeasurementReport_v0.3
-  {
-    definition: "Product/MetalComponent/MeasurementReport_v0.3",
-    source: "foo",
-    args: {
-      serial: "09N25",
-    },
-    response: {
-      componentIdentification: {
-        purchaseOrder: "12345",
-        componentName: "valve xyz",
-        productionNumber: "pn-20240205-00123",
-        drawingNumber: "xy00012345687",
-      },
-      customerInformation: {
-        name: "Company xyz",
-        department: "Department xyz",
-      },
-      measurementSetup: {
-        remarks: "Measurement taken from the outer edge to center, following xyz standards.",
-        measurementId: "1234567",
-        measurementTimestamp: "2025-02-06T09:26:52Z",
-        measurementRunType: "partial measurement",
-        batchSize: 100,
-        measuredItems: 50,
-        deviations: 0,
-        duration: 825,
-        measurementEquipment: [
-          {
-            machineSerialNumber: "mfg-model-xxxx-yyyy",
-          },
-        ],
-      },
-      measurementResults: [
-        {
-          featureName: "valve diameter middle D84",
-          measuredValue: 84.025,
-          nominalValue: 84,
-          upperTolerance: 0.055,
-          lowerTolerance: 0.055,
-          deviation: 0.025,
-          isWithinTolerance: true,
-        },
-      ],
-    },
   },
 
   // Product/MetalComponent/Traceability_v0.3

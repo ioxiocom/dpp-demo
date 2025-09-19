@@ -94,7 +94,7 @@ export const items: { [id: ItemID]: Item } = {
     name: "Accumulator (Item)",
     product: "55003625",
     serial: "43496",
-    manufacturer: "Ita Nordic",
+    manufacturer: "ITA Nordic",
     imageUrl: "/images/items/Accumulator.png",
     childIds: ["55003691_M11411521", "9733978_M11967763"],
     availableData: [
@@ -124,7 +124,7 @@ export const items: { [id: ItemID]: Item } = {
     name: "Base (Item)",
     product: "55003691",
     serial: "M11411521",
-    manufacturer: "Ita Nordic",
+    manufacturer: "ITA Nordic",
     imageUrl: "/images/items/Accumulator.png",
     childIds: [],
     availableData: [
@@ -145,7 +145,7 @@ export const items: { [id: ItemID]: Item } = {
     name: "Cover (Item)",
     product: "9733978",
     serial: "M11967763",
-    manufacturer: "Ita Nordic",
+    manufacturer: "ITA Nordic",
     imageUrl: "/images/items/Accumulator.png",
     childIds: [],
     availableData: [
@@ -166,7 +166,7 @@ export const items: { [id: ItemID]: Item } = {
     name: "Flushing device (Batch)",
     product: "BG00790833",
     serial: "8675",
-    manufacturer: "Ita Nordic",
+    manufacturer: "ITA Nordic",
     imageUrl: "/images/items/Flushing-device.png",
     childIds: [],
     availableData: [
@@ -212,8 +212,8 @@ export const items: { [id: ItemID]: Item } = {
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Measurement report (MOCK)",
-        definition: "Product/MetalComponent/MeasurementReport_v0.3",
+        name: "Measurement conformity",
+        definition: "Product/MeasurementConformity_v0.1",
         source: "foo",
         args: {
           serial: "09N25",
