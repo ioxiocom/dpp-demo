@@ -99,7 +99,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: ["55003691_M11411521", "9733978_M11967763"],
     availableData: [
       {
-        name: "Product carbon footprint (MOCK)",
+        name: "Product carbon footprint",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -110,7 +110,7 @@ export const items: { [id: ItemID]: Item } = {
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Traceability report (MOCK)",
+        name: "Traceability report",
         definition: "Product/MetalComponent/Traceability_v0.3",
         source: "ita_nordic",
         args: {
@@ -132,7 +132,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint (MOCK)",
+        name: "Product carbon footprint",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -154,7 +154,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint (MOCK)",
+        name: "Product carbon footprint",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
