@@ -9,7 +9,7 @@ const accessControlKeys: { [definition: string]: { [source: string]: string } } 
   },
   "Product/MetalComponent/Traceability_v0.3": {
     hanza: env.ACK_PRODUCT_METAL_COMPONENT_TRACEABILITY_HANZA || "",
-    ita_nordic: env.ACK_PRODUCT_METAL_COMPONENT_TRACEABILITY_HANZA_ITA_NORDIC || "",
+    ita_nordic: env.ACK_PRODUCT_METAL_COMPONENT_TRACEABILITY_ITA_NORDIC || "",
     tasowheel: env.ACK_PRODUCT_METAL_COMPONENT_TRACEABILITY_TASOWHEEL || "",
   },
   "Product/Sustainability/CarbonFootprint_v0.1": {
