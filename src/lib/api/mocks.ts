@@ -49,6 +49,15 @@ const CARBON_FOOTPRINT_EXAMPLE_RESPONSE = {
   logisticsFootprint: 0.18,
 }
 
+const SANDVIK_MANUFACTURER_INFORMATION = {
+  name: "Sandvik Mining and Construction Oy",
+  identification: {
+    identifierScheme: "nationalBusinessId",
+    identifier: "FI02116007",
+  },
+  address: "Pihtisulunkatu 9, 33330 TAMPERE, Finland",
+}
+
 export const mocks: Mock[] = [
   // Product/MeasurementConformity_v0.1
   {
@@ -98,6 +107,7 @@ export const mocks: Mock[] = [
     definition: "Product/Sustainability/CarbonFootprint_v0.1",
     source: "foo",
     args: {
+      // housing gear
       item: "BG00788225",
       serial: "T2-3265",
     },
@@ -207,6 +217,56 @@ export const mocks: Mock[] = [
       serial: "8675",
     },
     response: TRACEABILITY_EXAMPLE_RESPONSE,
+  },
+  {
+    definition: "Product/MetalComponent/Traceability_v0.3",
+    source: "foo",
+    args: {
+      serial: "L082566",
+    },
+    response: {
+      manufacturingDate: "2025-09-16",
+      deliveryDate: "2025-09-30",
+      componentIdentification: {
+        name: "Rock drill RDX5 80cc, Water Flushing, 20kW, 67Hz",
+        subComponentDeclaration: [],
+        purchaseOrder: "121898",
+        workOrder: "W241966",
+        shipmentId: "19910123456784",
+        blanks: [],
+        codeNomenclature: "84314300",
+        drawingNumber: "BG00928740",
+        drawingRevision: "C",
+      },
+      manufacturerInformation: SANDVIK_MANUFACTURER_INFORMATION,
+      processIdentification: {
+        identifier: "BG00928740-M01",
+      },
+    },
+  },
+  {
+    definition: "Product/MetalComponent/Traceability_v0.3",
+    source: "foo",
+    args: {
+      serial: "T2-3265",
+    },
+    response: {
+      manufacturingDate: "2025-09-01",
+      deliveryDate: "2025-09-08",
+      componentIdentification: {
+        name: "Gear housing RDX5, machined",
+        subComponentDeclaration: [],
+        workOrder: "W234465",
+        codeNomenclature: "84314300",
+        drawingNumber: "BG00788225",
+        drawingRevision: "F",
+        blanks: [{ identifier: "7558", type: "Casting" }],
+      },
+      manufacturerInformation: SANDVIK_MANUFACTURER_INFORMATION,
+      processIdentification: {
+        identifier: "BG00788225-M05",
+      },
+    },
   },
 ]
 

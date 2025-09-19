@@ -48,6 +48,15 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
+      {
+        name: "Traceability report",
+        definition: "Product/MetalComponent/Traceability_v0.3",
+        source: "foo",
+        args: {
+          serial: "L082566",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
     ],
   },
 
@@ -69,6 +78,15 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
+      {
+        name: "Traceability report",
+        definition: "Product/MetalComponent/Traceability_v0.3",
+        source: "foo",
+        args: {
+          serial: "T2-3265",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
     ],
   },
 
@@ -81,7 +99,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: ["55003691_M11411521", "9733978_M11967763"],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint (MOCK)",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
@@ -91,7 +109,7 @@ export const items: { [id: ItemID]: Item } = {
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Traceability report",
+        name: "Traceability report (MOCK)",
         definition: "Product/MetalComponent/Traceability_v0.3",
         source: "foo",
         args: {
@@ -111,7 +129,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint (MOCK)",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
@@ -132,7 +150,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint (MOCK)",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
@@ -153,7 +171,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint (MOCK)",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
@@ -163,7 +181,7 @@ export const items: { [id: ItemID]: Item } = {
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Traceability report",
+        name: "Traceability report (MOCK)",
         definition: "Product/MetalComponent/Traceability_v0.3",
         source: "foo",
         args: {
@@ -194,7 +212,7 @@ export const items: { [id: ItemID]: Item } = {
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
       {
-        name: "Measurement report",
+        name: "Measurement report (MOCK)",
         definition: "Product/MetalComponent/MeasurementReport_v0.3",
         source: "foo",
         args: {
@@ -248,11 +266,11 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   BG01127113_C25TF: {
-    name: "Rotation shaft (Batch)",
+    name: "Housing bearing (Batch)",
     product: "BG01127113",
     serial: "C25TF",
     manufacturer: "Hanza",
-    imageUrl: "/images/items/Rotation-shaft.png",
+    imageUrl: "/images/items/Housing-bearing.png",
     childIds: [],
     availableData: [
       {
