@@ -39,7 +39,7 @@ export const items: { [id: ItemID]: Item } = {
     ],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint for the item",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
@@ -69,7 +69,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint for the item",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "foo",
         args: {
@@ -99,7 +99,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: ["55003691_M11411521", "9733978_M11967763"],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint for the item",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -132,7 +132,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint for the item",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -154,7 +154,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint for the item",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -176,7 +176,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint for the batch",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "ita_nordic",
         args: {
@@ -209,7 +209,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint for the batch",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "nomet",
         args: {
@@ -240,7 +240,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint for the batch",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "tasowheel",
         args: {
@@ -282,7 +282,7 @@ export const items: { [id: ItemID]: Item } = {
     childIds: [],
     availableData: [
       {
-        name: "Product carbon footprint",
+        name: "Product carbon footprint for the batch",
         definition: "Product/Sustainability/CarbonFootprint_v0.1",
         source: "hanza",
         args: {
