@@ -99,7 +99,7 @@ export const mocks: Mock[] = [
       inspectionReportUrl: "https://nomet.fi/measurementReport.pdf/?secret_key=1234",
       statisticalControl: true,
       processCapability: "Cp 1.33",
-      remarks: "Mesaured with Zeiss Prismo 12/24/10",
+      remarks: "Measured with Zeiss Prismo 12/24/10",
     },
   },
 

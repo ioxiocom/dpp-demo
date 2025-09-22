@@ -28,7 +28,17 @@
       </section>
     </main>
     <footer>
-      Powered by <a href="https://ioxio.com">IOXIO</a>
+      <p>Powered by <a href="https://ioxio.com">IOXIO</a></p>
+      <hr />
+      <div class="disclaimer">
+        <h6>DISCLAIMER</h6>
+        <p>
+          This is a demo application intended for demonstration purposes only and may include incomplete,
+          simulated, or inaccurate data. Sandvik or any of the suppliers shown in the demo assume no
+          responsibility or liability for any errors, omissions, or decisions made based on the information
+          presented in this environment.
+        </p>
+      </div>
     </footer>
   {/if}
 </div>
@@ -69,9 +79,33 @@
     text-align: center;
     font-size: 0.875rem;
     padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
 
     a {
       color: #a08c64;
+    }
+
+    hr {
+      background-color: #6f6f6f;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .disclaimer {
+      h6 {
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        text-align: left;
+        font-size: 0.6rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+      }
     }
   }
 
