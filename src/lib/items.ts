@@ -142,6 +142,15 @@ export const items: { [id: ItemID]: Item } = {
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
+      {
+        name: "Measurement conformity",
+        definition: "Product/MeasurementConformity_v0.1",
+        source: "foo",
+        args: {
+          serial: "M11411521",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
     ],
   },
 
@@ -161,6 +170,15 @@ export const items: { [id: ItemID]: Item } = {
           product: "9733978",
           queryLevel: "item",
           id: "M11967763",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Measurement conformity",
+        definition: "Product/MeasurementConformity_v0.1",
+        source: "foo",
+        args: {
+          serial: "M11967763",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },
@@ -194,6 +212,15 @@ export const items: { [id: ItemID]: Item } = {
           product: "BG00790833",
           queryLevel: "batch",
           id: "8675",
+        },
+        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+      },
+      {
+        name: "Measurement conformity",
+        definition: "Product/MeasurementConformity_v0.1",
+        source: "foo",
+        args: {
+          serial: "8675",
         },
         roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
       },

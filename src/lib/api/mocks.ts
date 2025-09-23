@@ -102,6 +102,51 @@ export const mocks: Mock[] = [
       remarks: "Measured with Zeiss Prismo 12/24/10",
     },
   },
+  // accumulator cover
+  {
+    definition: "Product/MeasurementConformity_v0.1",
+    source: "foo",
+    args: {
+      serial: "M11411521",
+    },
+    response: {
+      inspectionReport: true,
+      inspectionReportUrl: "https://itacloud.fi/measurementReports/itemM11411521.pdf/?secret_key=12345",
+      statisticalControl: true,
+      processCapability: "Cp 2.74",
+      remarks: "Authorized inspector: Lauri Laakkonen",
+    },
+  },
+  // accumulator base
+  {
+    definition: "Product/MeasurementConformity_v0.1",
+    source: "foo",
+    args: {
+      serial: "M11967763",
+    },
+    response: {
+      inspectionReport: true,
+      inspectionReportUrl: "https://itacloud.fi/measurementReports/itemM11967763.pdf/?secret_key=12345",
+      statisticalControl: true,
+      processCapability: "Cp 2.86",
+      remarks: "Authorized inspector: Jari Jokinen",
+    },
+  },
+  // flushing device
+  {
+    definition: "Product/MeasurementConformity_v0.1",
+    source: "foo",
+    args: {
+      serial: "8675",
+    },
+    response: {
+      inspectionReport: true,
+      inspectionReportUrl: "https://itacloud.fi/measurementReports/batch8675.pdf/?secret_key=12345",
+      statisticalControl: true,
+      processCapability: "Cp 2.68",
+      remarks: "Authorized inspector: Ville Virtanen",
+    },
+  },
 
   // Product/Sustainability/CarbonFootprint_v0.1
   {
