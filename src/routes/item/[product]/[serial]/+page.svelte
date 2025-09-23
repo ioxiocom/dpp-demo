@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Badge from "$lib/components/Badge.svelte"
   import DataProduct from "$lib/components/DataProduct.svelte"
   import LockIcon from "$lib/assets/lock-icon.svg?component"
   import { roleNames } from "$lib/state.svelte"
@@ -14,8 +15,16 @@
 <div>
   <div class="item-header">
     <div class="text">
-      <h1>{item.name}</h1>
-      <h2>{item.serial}</h2>
+      <h1>
+        {item.name}
+        <Badge size="large">{item.batch ? "Batch" : "Item"}</Badge>
+      </h1>
+      <div class="serial-block">
+        <h2>{item.serial}</h2>
+        {#if item.batchSize}
+          <Badge size="small">{item.batchSize} items</Badge>
+        {/if}
+      </div>
     </div>
     <div class="logo">
       {#if item.manufacturer === "Sandvik"}
@@ -65,6 +74,13 @@
     justify-content: space-between;
     gap: 1rem;
     padding: 1.5rem;
+
+    .serial-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
 
     .text {
       display: flex;

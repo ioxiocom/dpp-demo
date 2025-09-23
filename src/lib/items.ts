@@ -12,6 +12,8 @@ export type DataProduct = {
 
 export type Item = {
   name: string
+  batch: boolean
+  batchSize?: number
   product: string
   serial: string
   manufacturer: string
@@ -24,7 +26,8 @@ export type Item = {
 
 export const items: { [id: ItemID]: Item } = {
   BG00928740_L082566: {
-    name: "RDX5 Rock Drill (Item)",
+    name: "RDX5 Rock Drill",
+    batch: false,
     product: "BG00928740",
     serial: "L082566",
     manufacturer: "Sandvik",
@@ -61,7 +64,8 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "BG00788225_T2-3265": {
-    name: "Housing gear (Item)",
+    name: "Housing gear",
+    batch: false,
     product: "BG00788225",
     serial: "T2-3265",
     manufacturer: "Sandvik",
@@ -91,7 +95,8 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "55003625_43496": {
-    name: "Accumulator (Item)",
+    name: "Accumulator",
+    batch: false,
     product: "55003625",
     serial: "43496",
     manufacturer: "ITA Nordic",
@@ -124,7 +129,8 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "55003691_M11411521": {
-    name: "Cover (Item)",
+    name: "Cover",
+    batch: false,
     product: "55003691",
     serial: "M11411521",
     manufacturer: "ITA Nordic",
@@ -155,7 +161,8 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "9733978_M11967763": {
-    name: "Base (Item)",
+    name: "Base",
+    batch: false,
     product: "9733978",
     serial: "M11967763",
     manufacturer: "ITA Nordic",
@@ -186,7 +193,8 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   BG00790833_8675: {
-    name: "Flushing device (Batch)",
+    name: "Flushing device",
+    batch: true,
     product: "BG00790833",
     serial: "8675",
     manufacturer: "ITA Nordic",
@@ -228,7 +236,9 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   BG00787392_09N25: {
-    name: "Housing seal (Batch)",
+    name: "Housing seal",
+    batch: true,
+    batchSize: 200,
     product: "BG00787392",
     serial: "09N25",
     manufacturer: "Nomet",
@@ -259,7 +269,8 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   "55057798_TW711338": {
-    name: "Bushing rotation (Batch)",
+    name: "Bushing rotation",
+    batch: true,
     product: "55057798",
     serial: "TW711338",
     manufacturer: "Tasowheel",
@@ -301,7 +312,9 @@ export const items: { [id: ItemID]: Item } = {
   },
 
   BG01127113_C25TF: {
-    name: "Housing bearing (Batch)",
+    name: "Housing bearing",
+    batch: true,
+    batchSize: 130,
     product: "BG01127113",
     serial: "C25TF",
     manufacturer: "Hanza",
