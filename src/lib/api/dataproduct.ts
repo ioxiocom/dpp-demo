@@ -13,7 +13,7 @@ const dataProductCache = {}
 
 export async function getDataProduct(definition: string, source: string, args: object) {
   // Check if already available in cache
-  const cacheKey = `${definition}?source=${source}`
+  const cacheKey = `${definition}?source=${source}&args=` + JSON.stringify(args)
   const ts = Date.now()
   if (dataProductCache[cacheKey] && dataProductCache[cacheKey].expires > ts) {
     await sleep(config.fakeRequestTime) // We want it to look like there's always a request
