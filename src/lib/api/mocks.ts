@@ -68,7 +68,7 @@ export const mocks: Mock[] = [
     },
     response: {
       inspectionReport: true,
-      inspectionReportUrl: "https://hanza.com/measurementReport.pdf?secret_key=1234",
+      inspectionReportUrl: "https://hanza.com",
       statisticalControl: false,
       processCapability: "Not available",
       remarks: "Measured with Coordinate Measuring Machine DEA Global S/N GLCI000435",
@@ -82,7 +82,7 @@ export const mocks: Mock[] = [
     },
     response: {
       inspectionReport: true,
-      inspectionReportUrl: "https://tasowheel.fi/measurementReport.pdf?secret_key=1234",
+      inspectionReportUrl: "https://tasowheel.fi",
       statisticalControl: true,
       processCapability: "Cp 1.33",
       remarks: "Measurements according to control plan",
@@ -96,7 +96,7 @@ export const mocks: Mock[] = [
     },
     response: {
       inspectionReport: true,
-      inspectionReportUrl: "https://nomet.fi/measurementReport.pdf/?secret_key=1234",
+      inspectionReportUrl: "https://nomet.fi",
       statisticalControl: true,
       processCapability: "Cp 1.33",
       remarks: "Measured with Zeiss Prismo 12/24/10",
