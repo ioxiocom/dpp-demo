@@ -59,7 +59,7 @@
     <div class="not-logged-in">
       <LockIcon width="70" height="70" />
       <p>Viewing data requires authentication, please log in.</p>
-      <button class="btn" onclick={startLogin}>Log in</button>
+      <button class="btn" onclick={startLogin}>Demo login</button>
     </div>
   {/if}
 </div>

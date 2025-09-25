@@ -49,7 +49,7 @@ export const items: { [id: ItemID]: Item } = {
           item: "BG00928740",
           serial: "L082566",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Traceability report",
@@ -80,7 +80,7 @@ export const items: { [id: ItemID]: Item } = {
           item: "BG00788225",
           serial: "T2-3265",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Traceability report",
@@ -112,7 +112,7 @@ export const items: { [id: ItemID]: Item } = {
           queryLevel: "item",
           id: "43496",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Traceability report",
@@ -146,7 +146,7 @@ export const items: { [id: ItemID]: Item } = {
           queryLevel: "item",
           id: "M11411521",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Measurement conformity",
@@ -155,7 +155,7 @@ export const items: { [id: ItemID]: Item } = {
         args: {
           serial: "M11411521",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.QUALITY_ENGINEER],
       },
     ],
   },
@@ -178,7 +178,7 @@ export const items: { [id: ItemID]: Item } = {
           queryLevel: "item",
           id: "M11967763",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Measurement conformity",
@@ -187,7 +187,7 @@ export const items: { [id: ItemID]: Item } = {
         args: {
           serial: "M11967763",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.QUALITY_ENGINEER],
       },
     ],
   },
@@ -195,6 +195,7 @@ export const items: { [id: ItemID]: Item } = {
   BG00790833_8675: {
     name: "Flushing device",
     batch: true,
+    batchSize: 60,
     product: "BG00790833",
     serial: "8675",
     manufacturer: "ITA Nordic",
@@ -210,7 +211,7 @@ export const items: { [id: ItemID]: Item } = {
           queryLevel: "batch",
           id: "8675",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Traceability report",
@@ -230,7 +231,7 @@ export const items: { [id: ItemID]: Item } = {
         args: {
           serial: "8675",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.QUALITY_ENGINEER],
       },
     ],
   },
@@ -254,7 +255,7 @@ export const items: { [id: ItemID]: Item } = {
           queryLevel: "batch",
           id: "09N25",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Measurement conformity",
@@ -263,7 +264,7 @@ export const items: { [id: ItemID]: Item } = {
         args: {
           serial: "09N25",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.QUALITY_ENGINEER],
       },
     ],
   },
@@ -271,6 +272,7 @@ export const items: { [id: ItemID]: Item } = {
   "55057798_TW711338": {
     name: "Bushing rotation",
     batch: true,
+    batchSize: 194,
     product: "55057798",
     serial: "TW711338",
     manufacturer: "Tasowheel",
@@ -286,7 +288,7 @@ export const items: { [id: ItemID]: Item } = {
           queryLevel: "batch",
           id: "711338",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Traceability report",
@@ -306,7 +308,7 @@ export const items: { [id: ItemID]: Item } = {
         args: {
           serial: "TW711338",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.QUALITY_ENGINEER],
       },
     ],
   },
@@ -330,7 +332,7 @@ export const items: { [id: ItemID]: Item } = {
           queryLevel: "batch",
           id: "C25TF",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.SUSTAINABILITY_MANAGER],
       },
       {
         name: "Traceability report",
@@ -350,7 +352,7 @@ export const items: { [id: ItemID]: Item } = {
         args: {
           serial: "C25TF",
         },
-        roles: [Role.QUALITY_ENGINEER, Role.SUSTAINABILITY_MANAGER],
+        roles: [Role.QUALITY_ENGINEER],
       },
     ],
   },

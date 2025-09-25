@@ -69,7 +69,7 @@ export const mocks: Mock[] = [
     response: {
       inspectionReport: true,
       inspectionReportUrl: "https://hanza.com",
-      statisticalControl: false,
+      statisticalControl: true,
       processCapability: "Not available",
       remarks: "Measured with Coordinate Measuring Machine DEA Global S/N GLCI000435",
     },
@@ -84,7 +84,7 @@ export const mocks: Mock[] = [
       inspectionReport: true,
       inspectionReportUrl: "https://tasowheel.fi",
       statisticalControl: true,
-      processCapability: "Cp 1.33",
+      processCapability: "Cp 1.42",
       remarks: "Measurements according to control plan",
     },
   },
@@ -98,7 +98,7 @@ export const mocks: Mock[] = [
       inspectionReport: true,
       inspectionReportUrl: "https://nomet.fi",
       statisticalControl: true,
-      processCapability: "Cp 1.33",
+      processCapability: "Cp 1.56",
       remarks: "Measured with Zeiss Prismo 12/24/10",
     },
   },
@@ -114,7 +114,7 @@ export const mocks: Mock[] = [
       inspectionReportUrl: "https://itacloud.fi/measurementReports/itemM11411521.pdf/?secret_key=12345",
       statisticalControl: true,
       processCapability: "Cp 2.74",
-      remarks: "Authorized inspector: Lauri Laakkonen",
+      remarks: "Authorized inspector: QA009",
     },
   },
   // accumulator base
@@ -129,7 +129,7 @@ export const mocks: Mock[] = [
       inspectionReportUrl: "https://itacloud.fi/measurementReports/itemM11967763.pdf/?secret_key=12345",
       statisticalControl: true,
       processCapability: "Cp 2.86",
-      remarks: "Authorized inspector: Jari Jokinen",
+      remarks: "Authorized inspector: QA0027",
     },
   },
   // flushing device
@@ -144,7 +144,7 @@ export const mocks: Mock[] = [
       inspectionReportUrl: "https://itacloud.fi/measurementReports/batch8675.pdf/?secret_key=12345",
       statisticalControl: true,
       processCapability: "Cp 2.68",
-      remarks: "Authorized inspector: Ville Virtanen",
+      remarks: "Authorized inspector: QA0012",
     },
   },
 
