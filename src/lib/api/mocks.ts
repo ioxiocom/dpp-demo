@@ -68,7 +68,7 @@ export const mocks: Mock[] = [
     },
     response: {
       inspectionReport: true,
-      inspectionReportUrl: "https://hanza.com",
+      inspectionReportUrl: "https://hanza.com/measurementReport.pdf?secret_key=12345",
       statisticalControl: true,
       processCapability: "Not available",
       remarks: "Measured with Coordinate Measuring Machine DEA Global S/N GLCI000435",
@@ -82,7 +82,7 @@ export const mocks: Mock[] = [
     },
     response: {
       inspectionReport: true,
-      inspectionReportUrl: "https://tasowheel.fi",
+      inspectionReportUrl: "https://tasowheel.fi/measurementReport.pdf?secret_key=12345",
       statisticalControl: true,
       processCapability: "Cp 1.42",
       remarks: "Measurements according to control plan",
@@ -96,7 +96,7 @@ export const mocks: Mock[] = [
     },
     response: {
       inspectionReport: true,
-      inspectionReportUrl: "https://nomet.fi",
+      inspectionReportUrl: "https://nomet.fi/measurementReport.pdf?secret_key=12345",
       statisticalControl: true,
       processCapability: "Cp 1.56",
       remarks: "Measured with Zeiss Prismo 12/24/10",
@@ -111,7 +111,7 @@ export const mocks: Mock[] = [
     },
     response: {
       inspectionReport: true,
-      inspectionReportUrl: "https://itacloud.fi/measurementReports/itemM11411521.pdf/?secret_key=12345",
+      inspectionReportUrl: "https://itacloud.fi/measurementReports/itemM11411521.pdf?secret_key=12345",
       statisticalControl: true,
       processCapability: "Cp 2.74",
       remarks: "Authorized inspector: QA009",
@@ -126,7 +126,7 @@ export const mocks: Mock[] = [
     },
     response: {
       inspectionReport: true,
-      inspectionReportUrl: "https://itacloud.fi/measurementReports/itemM11967763.pdf/?secret_key=12345",
+      inspectionReportUrl: "https://itacloud.fi/measurementReports/itemM11967763.pdf?secret_key=12345",
       statisticalControl: true,
       processCapability: "Cp 2.86",
       remarks: "Authorized inspector: QA0027",
@@ -141,7 +141,7 @@ export const mocks: Mock[] = [
     },
     response: {
       inspectionReport: true,
-      inspectionReportUrl: "https://itacloud.fi/measurementReports/batch8675.pdf/?secret_key=12345",
+      inspectionReportUrl: "https://itacloud.fi/measurementReports/batch8675.pdf?secret_key=12345",
       statisticalControl: true,
       processCapability: "Cp 2.68",
       remarks: "Authorized inspector: QA0012",
