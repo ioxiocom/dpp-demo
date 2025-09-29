@@ -53,7 +53,7 @@
     processIdentification: ProcessIdentification
   }
 
-  export let response: TraceabilityResponse
+  const { response }: { response: TraceabilityResponse } = $props()
 
   function getCompanyIdentifierDisplay(identification: CompanyIdentification): string {
     if (!identification.identifier) return "-"
@@ -73,6 +73,16 @@
   const component = response.componentIdentification
   const manufacturer = response.manufacturerInformation
   const process = response.processIdentification
+
+  const subComponents = $derived.by(() => {
+    const components: SubComponent[] = []
+    for (const c of component.subComponentDeclaration) {
+      if (c.name?.toLowerCase() !== "null" && c.identifier?.toLowerCase() !== "null") {
+        components.push(c)
+      }
+    }
+    return components
+  })
 </script>
 
 <Article>
@@ -94,10 +104,10 @@
   <DataRow label="Drawing number" value={component.drawingNumber} />
   <DataRow label="Drawing revision" value={component.drawingRevision} />
 
-  {#if component.subComponentDeclaration.length > 0}
+  {#if subComponents.length > 0}
     <SectionHeader title="Subcomponent declaration">The identifiers related to the component.</SectionHeader>
 
-    {#each component.subComponentDeclaration as subComponent}
+    {#each subComponents as subComponent}
       <div class="padded">
         <DataRow label="Name" value={subComponent.name} />
         <DataRow label="Work order" value={subComponent.identifier} />
