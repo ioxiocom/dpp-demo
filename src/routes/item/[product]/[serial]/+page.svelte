@@ -26,7 +26,7 @@
         {/if}
       </div>
     </div>
-    <div class="logo">
+    <div class="logo" class:nomet={item.manufacturer === "Nomet"} class:hanza={item.manufacturer === "Hanza"}>
       {#if item.manufacturer === "Sandvik"}
         <img src="/images/logos/sandvik.png" alt="" />
       {:else if item.manufacturer === "ITA Nordic"}
@@ -110,6 +110,14 @@
 
     :global(.logo img) {
       height: 1.5rem;
+    }
+
+    :global(.logo.nomet img) {
+      height: 2.5rem;
+    }
+
+    :global(.logo.hanza img) {
+      height: 1.25rem;
     }
   }
 
